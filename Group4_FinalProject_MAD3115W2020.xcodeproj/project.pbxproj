@@ -105,6 +105,7 @@
 				8E87A070242149BF00FFEBC3 /* Sources */,
 				8E87A071242149BF00FFEBC3 /* Frameworks */,
 				8E87A072242149BF00FFEBC3 /* Resources */,
+				9ACCA5EB4E514CA98ADCC552 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,6 +164,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9ACCA5EB4E514CA98ADCC552 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Group4_FinalProject_MAD3115W2020/Pods-Group4_FinalProject_MAD3115W2020-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Group4_FinalProject_MAD3115W2020/Pods-Group4_FinalProject_MAD3115W2020-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Group4_FinalProject_MAD3115W2020/Pods-Group4_FinalProject_MAD3115W2020-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BC10E1D44D661BCEA0F8BF03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
