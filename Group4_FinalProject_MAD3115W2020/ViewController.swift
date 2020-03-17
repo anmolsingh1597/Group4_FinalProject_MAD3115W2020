@@ -7,13 +7,18 @@
 //
 
 import UIKit
+//import MaterialComponents.MaterialCards
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var iView1: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func iButton(_ sender: UIButton) {
+        iView1.isHidden = false
+    }
 }
 

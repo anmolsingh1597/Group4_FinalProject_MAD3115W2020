@@ -1,0 +1,1 @@
+../../../MaterialComponents/components/AnimationTiming/src/CAMediaTimingFunction+MDCAnimationTiming 3.h
