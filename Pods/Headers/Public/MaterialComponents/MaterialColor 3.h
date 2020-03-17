@@ -1,0 +1,1 @@
+../../../MaterialComponents/components/private/Color/src/MaterialColor 3.h

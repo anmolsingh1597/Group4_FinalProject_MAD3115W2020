@@ -1,0 +1,6 @@
+framework module Pods_Group4_FinalProject_MAD3115W2020 {
+  umbrella header "Pods-Group4_FinalProject_MAD3115W2020-umbrella.h"
+
+  export *
+  module * { export * }
+}

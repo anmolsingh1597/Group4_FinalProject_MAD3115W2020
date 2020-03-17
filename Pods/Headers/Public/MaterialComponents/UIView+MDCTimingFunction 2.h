@@ -1,0 +1,1 @@
+../../../MaterialComponents/components/AnimationTiming/src/UIView+MDCTimingFunction 2.h
