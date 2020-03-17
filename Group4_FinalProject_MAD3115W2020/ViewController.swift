@@ -18,15 +18,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func iButton(_ sender: UIButton) {
-        iView1.isHidden = false
-        iView2.isHidden = true
- }
     
-    @IBAction func iButton2(_ sender: UIButton) {
-        iView2.isHidden = false
+    @IBAction func iPersonSegment(_ sender: UISegmentedControl) {
+        personSegmentValue(index: sender.selectedSegmentIndex)
     }
+    
+    private func personSegmentValue(index: Int){
+        switch index {
+        case 0:
+            iView1.isHidden = false
+            iView2.isHidden = true
+        case 1:
+            iView2.isHidden = false
+            iView1.isHidden = true
+        default:
+            iView1.isHidden = true
+            iView2.isHidden = true
+        }
+    }
+    
     
 }
 
