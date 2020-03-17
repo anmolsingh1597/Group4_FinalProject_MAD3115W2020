@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4CE92272FBC3251F3B01DD49 /* libPods-Group4_FinalProject_MAD3115W2020.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DB81AA7D79BC4B71B50C9A /* libPods-Group4_FinalProject_MAD3115W2020.a */; };
+		8E0A4ADD242193C400481DC2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4ADC242193C400481DC2 /* Person.swift */; };
 		8E87A078242149BF00FFEBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A077242149BF00FFEBC3 /* AppDelegate.swift */; };
 		8E87A07A242149BF00FFEBC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */; };
 		8E87A07C242149BF00FFEBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A07B242149BF00FFEBC3 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		01C1E5E7203F970EA7E21AB8 /* Pods-Group4_FinalProject_MAD3115W2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group4_FinalProject_MAD3115W2020.release.xcconfig"; path = "Target Support Files/Pods-Group4_FinalProject_MAD3115W2020/Pods-Group4_FinalProject_MAD3115W2020.release.xcconfig"; sourceTree = "<group>"; };
 		5315605BCCE7FFDCD5B1F04F /* Pods-Group4_FinalProject_MAD3115W2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group4_FinalProject_MAD3115W2020.debug.xcconfig"; path = "Target Support Files/Pods-Group4_FinalProject_MAD3115W2020/Pods-Group4_FinalProject_MAD3115W2020.debug.xcconfig"; sourceTree = "<group>"; };
+		8E0A4ADC242193C400481DC2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8E87A074242149BF00FFEBC3 /* Group4_FinalProject_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group4_FinalProject_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E87A077242149BF00FFEBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				8E87A082242149C100FFEBC3 /* LaunchScreen.storyboard */,
 				8E87A085242149C100FFEBC3 /* Info.plist */,
 				8E87A08B24214CFF00FFEBC3 /* GoogleService-Info.plist */,
+				8E0A4ADC242193C400481DC2 /* Person.swift */,
 			);
 			path = Group4_FinalProject_MAD3115W2020;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				8E87A07C242149BF00FFEBC3 /* ViewController.swift in Sources */,
 				8E87A078242149BF00FFEBC3 /* AppDelegate.swift in Sources */,
+				8E0A4ADD242193C400481DC2 /* Person.swift in Sources */,
 				8E87A07A242149BF00FFEBC3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
