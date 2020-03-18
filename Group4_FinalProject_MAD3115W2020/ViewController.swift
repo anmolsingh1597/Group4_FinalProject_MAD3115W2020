@@ -25,10 +25,6 @@ class ViewController: UIViewController {
         customerList = DataStorage.getInstance().getAllCustomers()
         driverList = DataStorage.getInstance().getAllDrivers()
         ownerList = DataStorage.getInstance().getAllOwners()
-        
-        print(customerList)
-        print(driverList)
-        print(ownerList)
     }
     
     @IBAction func iPersonSegment(_ sender: UISegmentedControl) {
