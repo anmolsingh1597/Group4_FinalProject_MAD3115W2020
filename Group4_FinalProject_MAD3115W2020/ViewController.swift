@@ -60,6 +60,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableview: UITableView) -> Int{
+            return 1
+        }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == iTableViewCustomer{
             return customerList.count
