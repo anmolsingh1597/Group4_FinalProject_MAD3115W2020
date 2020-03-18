@@ -12,7 +12,15 @@ class AddPersonViewController: UIViewController {
     @IBOutlet weak var iGeneralTextField1: UITextField!
     @IBOutlet weak var iGeneralTextField2: UITextField!
     @IBOutlet weak var iGeneralTextField3: UITextField!
-    
+    @IBOutlet weak var iId: UITextField!
+    @IBOutlet weak var iFirstName: UITextField!
+    @IBOutlet weak var iLastName: UITextField!
+    @IBOutlet weak var iGender: UITextField!
+    @IBOutlet weak var iBirthDate: UITextField!
+    @IBOutlet weak var iMobileNumber: UITextField!
+    @IBOutlet weak var iEmailId: UITextField!
+    @IBOutlet weak var iUserName: UITextField!
+    @IBOutlet weak var iPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +53,11 @@ class AddPersonViewController: UIViewController {
             iGeneralTextField3.isHidden = false
         }
     }
+    
+    @IBAction func iSavePersonDetails(_ sender: UIBarButtonItem) {
+        
+    }
+    
 
     /*
     // MARK: - Navigation

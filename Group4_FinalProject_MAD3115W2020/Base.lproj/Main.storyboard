@@ -350,11 +350,26 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G81-B5-tgh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Person" id="XnS-GK-vaT"/>
+                    <navigationItem key="navigationItem" title="Person" id="XnS-GK-vaT">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="9UJ-S4-aJw">
+                            <connections>
+                                <action selector="iSavePersonDetails:" destination="oII-ek-cvc" id="fMg-TB-hAd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="iBirthDate" destination="a8K-PG-cEF" id="1a2-bQ-yuk"/>
+                        <outlet property="iEmailId" destination="0rC-yv-Mz6" id="n1E-92-9aU"/>
+                        <outlet property="iFirstName" destination="4Qb-Cm-7Pn" id="Efk-7K-7uA"/>
+                        <outlet property="iGender" destination="ii7-2M-mUx" id="6FV-JD-vEI"/>
                         <outlet property="iGeneralTextField1" destination="KAB-uQ-ia1" id="wuT-lf-m3h"/>
                         <outlet property="iGeneralTextField2" destination="Kgx-3a-ya3" id="cWW-sS-ELL"/>
                         <outlet property="iGeneralTextField3" destination="E4j-Dw-6PN" id="Jpv-Aj-L35"/>
+                        <outlet property="iId" destination="dMz-mn-KAa" id="TUw-tA-RR7"/>
+                        <outlet property="iLastName" destination="GLc-ln-gPM" id="f2p-7S-8ND"/>
+                        <outlet property="iMobileNumber" destination="GgJ-hT-QpC" id="Prc-2r-lzQ"/>
+                        <outlet property="iPassword" destination="qkf-ne-tk5" id="Kdb-SD-fHO"/>
+                        <outlet property="iUserName" destination="NFW-qa-pdq" id="cri-so-KuQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTf-5d-ik5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
