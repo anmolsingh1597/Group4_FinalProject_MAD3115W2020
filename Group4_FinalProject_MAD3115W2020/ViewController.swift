@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        customerList = DataStorage.getInstance().getAllCustomers()
+        driverList = DataStorage.getInstance().getAllDrivers()
+        ownerList = DataStorage.getInstance().getAllOwners()
     }
     
     @IBAction func iPersonSegment(_ sender: UISegmentedControl) {
@@ -54,6 +57,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == iTableViewCustomer{
+            return customerList.count
+            
+        }else if tableView == iTableDrivers{
+            return driverList.count
+        
+        }else if tableView == iTableOwners{
+            return ownerList.count
+        }
         return 1
     }
     
