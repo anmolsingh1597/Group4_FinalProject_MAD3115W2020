@@ -47,9 +47,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "driverCell")
-        cell?.textLabel?.text = "Anmol"
-        return cell!
+        if tableView == iTableViewCustomer{
+            let customerCell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
+            customerCell?.textLabel?.text = "Customer: Anmol"
+            return customerCell!
+        } else if tableView == iTableDrivers{
+        let driverCell = tableView.dequeueReusableCell(withIdentifier: "driverCell")
+        driverCell?.textLabel?.text = "Anmol"
+            return driverCell!}
+        return UITableViewCell()
     }
     
     
