@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         customerList = DataStorage.getInstance().getAllCustomers()
         driverList = DataStorage.getInstance().getAllDrivers()
         ownerList = DataStorage.getInstance().getAllOwners()
+        
+        print(customerList)
+        print(driverList)
+        print(ownerList)
     }
     
     @IBAction func iPersonSegment(_ sender: UISegmentedControl) {
@@ -73,15 +77,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         if tableView == iTableViewCustomer{
             let customerCell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
-            customerCell?.textLabel?.text = "Customer: Anmol"
+            let person = customerList[indexPath.row]
+            customerCell?.textLabel?.text = person.firstName
+            customerCell?.detailTextLabel?.text = person.id
             return customerCell!
         } else if tableView == iTableDrivers{
         let driverCell = tableView.dequeueReusableCell(withIdentifier: "driverCell")
-        driverCell?.textLabel?.text = "Anmol"
+            let person = driverList[indexPath.row]
+            driverCell?.textLabel?.text = person.firstName
+            driverCell?.detailTextLabel?.text = person.id
             return driverCell!}
         else if tableView == iTableOwners{
             let ownerCell = tableView.dequeueReusableCell(withIdentifier: "ownerCell")
-            ownerCell?.textLabel?.text = "Anmol"
+            let person = ownerList[indexPath.row]
+            ownerCell?.textLabel?.text = person.firstName
+            ownerCell?.detailTextLabel?.text = person.id
                 return ownerCell!
         }
         return UITableViewCell()
