@@ -12,8 +12,10 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var iView1: UIView!
     @IBOutlet weak var iView2: UIView!
+    @IBOutlet weak var iView3: UIView!
     @IBOutlet weak var iTableViewCustomer: UITableView!
     @IBOutlet weak var iTableDrivers: UITableView!
+    @IBOutlet weak var iTableOwners: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,12 +30,19 @@ class ViewController: UIViewController {
         case 0:
             iView1.isHidden = false
             iView2.isHidden = true
+            iView3.isHidden = true
         case 1:
             iView2.isHidden = false
             iView1.isHidden = true
+            iView3.isHidden = true
+        case 2:
+            iView1.isHidden = true
+            iView2.isHidden = true
+            iView3.isHidden = false
         default:
             iView1.isHidden = true
             iView2.isHidden = true
+            iView3.isHidden = true
         }
     }
     
@@ -55,6 +64,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let driverCell = tableView.dequeueReusableCell(withIdentifier: "driverCell")
         driverCell?.textLabel?.text = "Anmol"
             return driverCell!}
+        else if tableView == iTableOwners{
+            let ownerCell = tableView.dequeueReusableCell(withIdentifier: "ownerCell")
+            ownerCell?.textLabel?.text = "Anmol"
+                return ownerCell!
+        }
         return UITableViewCell()
     }
     
