@@ -12,7 +12,9 @@ import Firebase
 class DataStorage{
     var ref = Database.database().reference()
     private static let instance = DataStorage()
-    private lazy var personList: [Person] = []
+    private lazy var customerList: [Customer] = []
+    private lazy var driverList: [Driver] = []
+    private lazy var ownerList: [Owner] = []
     private init (){}
     
     static func getInstance() -> DataStorage{
