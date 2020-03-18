@@ -78,19 +78,19 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
         if iPersonSegmentValue.selectedSegmentIndex == 0{
             let address = iGeneralTextField1.text
             let city = iGeneralTextField2.text
-            self.insert = ["id": id ?? "", "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "", "address": address ?? "", "city": city ?? ""]
+            self.insert = ["id": "CUS_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "", "address": address ?? "", "city": city ?? "", "personType": "Customer"]
         }
         else if iPersonSegmentValue.selectedSegmentIndex == 1{
             let drivingLicenseNumber = iGeneralTextField1.text
             let drivingHistory = iGeneralTextField2.text
             let salary = iGeneralTextField3.text
-            self.insert = ["id": id ?? "", "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","drivingLicenseNumber": drivingLicenseNumber ?? "", "drivingHistory": drivingHistory ?? "","salary": salary ?? ""]
+            self.insert = ["id": "DRI_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","drivingLicenseNumber": drivingLicenseNumber ?? "", "drivingHistory": drivingHistory ?? "","salary": salary ?? "", "personType": "Driver"]
         }
         else if iPersonSegmentValue.selectedSegmentIndex == 2{
             let companyTitle = iGeneralTextField1.text
             let businessNumber = iGeneralTextField2.text
             let website = iGeneralTextField3.text
-            self.insert = ["id": id ?? "", "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? "", "businessNumber": businessNumber ?? "", "website": website ?? ""]
+            self.insert = ["id": "OWN_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? "", "businessNumber": businessNumber ?? "", "website": website ?? "", "personType": "Owner"]
         }
         else {
             
