@@ -46,6 +46,12 @@ class DataStorage{
                 for value in personDict.values{
                     if value["personType"] == "Customer"{
                         self.customerList.append((Customer.init(id: value["id"] ?? "", firstName: value["firstName"] ?? "", lastName: value["lastName"] ?? "", gender: value["gender"] ?? "", birthDate: value["birthDate"] ?? "", mobileNumber: value["mobileNumber"] ?? "", emailId: value["email"] ?? "", userName: value["userName"] ?? "", password: value["password"] ?? "", address: value["address"] ?? "", city: value["city"] ?? "")))
+                    
+                    } else if value["personType"] == "Driver"{
+                        self.driverList.append((Driver.init(id: value["id"] ?? "", firstName: value["firstName"] ?? "", lastName: value["lastName"] ?? "", gender: value["gender"] ?? "", birthDate: value["birthDate"] ?? "", mobileNumber: value["mobileNumber"] ?? "", emailId: value["email"] ?? "", userName: value["userName"] ?? "", password: value["password"] ?? "", drivingLicenceNumber: value["drivingLicenseNumber"] ?? "", isDrivingHistoryCleared: value["drivingHistory"] ?? "", salary: value["salary"] ?? "" )))
+                   
+                    }else if value["personType"] == "Owner"{
+                        self.ownerList.append((Owner.init(id: value["id"] ?? "", firstName: value["firstName"] ?? "", lastName: value["lastName"] ?? "", gender: value["gender"] ?? "", birthDate: value["birthDate"] ?? "", mobileNumber: value["mobileNumber"] ?? "", emailId: value["email"] ?? "", userName: value["userName"] ?? "", password: value["password"] ?? "", companyTitle: value["companyTitle"] ?? "", businessNumber: value["businessNumber"] ?? "", website: value["website"] ?? "")))
                     }
                 }
             }
