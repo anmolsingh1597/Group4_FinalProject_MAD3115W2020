@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import Firebase
+
+class DataStorage{
+    var ref = Database.database().reference()
+    private static let instance = DataStorage()
+    private lazy var personList: [Person] = []
+    private init (){}
+    
+    static func getInstance() -> DataStorage{
+        return instance
+    }
+    
+}
