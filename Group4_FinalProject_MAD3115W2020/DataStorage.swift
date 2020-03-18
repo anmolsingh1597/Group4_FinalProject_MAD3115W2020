@@ -52,7 +52,8 @@ class DataStorage{
                    
                     }else if value["personType"] == "Owner"{
                         self.ownerList.append((Owner.init(id: value["id"] ?? "", firstName: value["firstName"] ?? "", lastName: value["lastName"] ?? "", gender: value["gender"] ?? "", birthDate: value["birthDate"] ?? "", mobileNumber: value["mobileNumber"] ?? "", emailId: value["email"] ?? "", userName: value["userName"] ?? "", password: value["password"] ?? "", companyTitle: value["companyTitle"] ?? "", businessNumber: value["businessNumber"] ?? "", website: value["website"] ?? "")))
-                    }
+                    
+                    }else {}
                 }
             }
         })
