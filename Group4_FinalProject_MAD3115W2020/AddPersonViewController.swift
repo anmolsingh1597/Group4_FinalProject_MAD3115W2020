@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AddPersonViewController: UIViewController {
+class AddPersonViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iGeneralTextField1: UITextField!
     @IBOutlet weak var iGeneralTextField2: UITextField!
     @IBOutlet weak var iGeneralTextField3: UITextField!
@@ -25,11 +25,17 @@ class AddPersonViewController: UIViewController {
     var ref = Database.database().reference()
     @IBOutlet weak var iPersonSegmentValue: UISegmentedControl!
     var insert: [String: String] = [String: String]()
+    var datePicker : UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+             self.pickUpDate(self.iBirthDate)
+         }
+    
     @IBAction func iPersonSegment(_ sender: UISegmentedControl) {
         personSegmentValues(index: sender.selectedSegmentIndex)
     }
@@ -100,7 +106,9 @@ class AddPersonViewController: UIViewController {
         else{
             let childUpdates = ["/Persons/\(key)": insert]
                               self.ref.updateChildValues(childUpdates)
-            
+            let alertControll = UIAlertController(title: "Success!!", message: "User Added Successfully", preferredStyle: .alert)
+            alertControll.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertControll,animated: true,completion: nil)
         }
     }
     
@@ -115,4 +123,44 @@ class AddPersonViewController: UIViewController {
     }
     */
 
+}
+
+extension AddPersonViewController{
+    func pickUpDate(_ textField : UITextField){
+             
+             // DatePicker
+             self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+             self.datePicker.backgroundColor = UIColor.white
+             self.datePicker.datePickerMode = UIDatePicker.Mode.date
+             textField.inputView = self.datePicker
+             
+             // ToolBar
+             let toolBar = UIToolbar()
+             toolBar.barStyle = .default
+             toolBar.isTranslucent = true
+             toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+             toolBar.sizeToFit()
+             
+             // Adding Button ToolBar
+             let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddPersonViewController.doneClick))
+             let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+             let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddPersonViewController.cancelClick))
+             toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+             toolBar.isUserInteractionEnabled = true
+             textField.inputAccessoryView = toolBar
+             
+         }
+         
+         @objc func doneClick() {
+             let dateFormatter1 = DateFormatter()
+             dateFormatter1.dateStyle = .medium
+             dateFormatter1.timeStyle = .none
+             iBirthDate.text = dateFormatter1.string(from: datePicker.date)
+             iBirthDate.resignFirstResponder()
+         }
+         
+         @objc func cancelClick() {
+            iBirthDate.resignFirstResponder()
+            
+    }
 }
