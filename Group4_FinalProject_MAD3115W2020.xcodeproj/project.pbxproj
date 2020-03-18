@@ -14,6 +14,7 @@
 		8E0A4AE32421982D00481DC2 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4AE22421982D00481DC2 /* Enum.swift */; };
 		8E0A4AE52421999800481DC2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4AE42421999800481DC2 /* Owner.swift */; };
 		8E10967C2421B58400F4BCE5 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10967B2421B58400F4BCE5 /* AddPersonViewController.swift */; };
+		8E10967E2422955D00F4BCE5 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10967D2422955D00F4BCE5 /* DataStorage.swift */; };
 		8E87A078242149BF00FFEBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A077242149BF00FFEBC3 /* AppDelegate.swift */; };
 		8E87A07A242149BF00FFEBC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */; };
 		8E87A07C242149BF00FFEBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A07B242149BF00FFEBC3 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		8E0A4AE22421982D00481DC2 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		8E0A4AE42421999800481DC2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8E10967B2421B58400F4BCE5 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		8E10967D2422955D00F4BCE5 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		8E87A074242149BF00FFEBC3 /* Group4_FinalProject_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group4_FinalProject_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E87A077242149BF00FFEBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8E0A4AE02421969700481DC2 /* Driver.swift */,
 				8E0A4AE42421999800481DC2 /* Owner.swift */,
 				8E0A4AE22421982D00481DC2 /* Enum.swift */,
+				8E10967D2422955D00F4BCE5 /* DataStorage.swift */,
 			);
 			path = Group4_FinalProject_MAD3115W2020;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				8E87A078242149BF00FFEBC3 /* AppDelegate.swift in Sources */,
 				8E0A4AE12421969700481DC2 /* Driver.swift in Sources */,
 				8E0A4AE32421982D00481DC2 /* Enum.swift in Sources */,
+				8E10967E2422955D00F4BCE5 /* DataStorage.swift in Sources */,
 				8E0A4ADD242193C400481DC2 /* Person.swift in Sources */,
 				8E87A07A242149BF00FFEBC3 /* SceneDelegate.swift in Sources */,
 			);
