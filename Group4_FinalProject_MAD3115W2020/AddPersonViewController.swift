@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddPersonViewController: UIViewController {
     @IBOutlet weak var iGeneralTextField1: UITextField!
@@ -21,9 +22,11 @@ class AddPersonViewController: UIViewController {
     @IBOutlet weak var iEmailId: UITextField!
     @IBOutlet weak var iUserName: UITextField!
     @IBOutlet weak var iPassword: UITextField!
+    var ref = Database.database().reference()
+    @IBOutlet weak var iPersonSegmentValue: UISegmentedControl!
+    var insert: [String: String] = [String: String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     
     }
@@ -55,7 +58,50 @@ class AddPersonViewController: UIViewController {
     }
     
     @IBAction func iSavePersonDetails(_ sender: UIBarButtonItem) {
+        let id = self.iId.text
+        let firstName = self.iFirstName.text
+        let lastName = self.iLastName.text
+        let gender = self.iGender.text
+        let birthDate = self.iBirthDate.text
+        let mobileNumber = self.iMobileNumber.text
+        let email = self.iEmailId.text
+        let userName = iUserName.text
+        let password = iPassword.text
+
+         guard let key = self.ref.child("Persons").childByAutoId().key else {return}
+        if iPersonSegmentValue.selectedSegmentIndex == 0{
+            let address = iGeneralTextField1.text
+            let city = iGeneralTextField2.text
+            self.insert = ["id": id ?? "", "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "", "address": address ?? "", "city": city ?? ""]
+        }
+        else if iPersonSegmentValue.selectedSegmentIndex == 1{
+            let drivingLicenseNumber = iGeneralTextField1.text
+            let drivingHistory = iGeneralTextField2.text
+            let salary = iGeneralTextField3.text
+            self.insert = ["id": id ?? "", "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","drivingLicenseNumber": drivingLicenseNumber ?? "", "drivingHistory": drivingHistory ?? "","salary": salary ?? ""]
+        }
+        else if iPersonSegmentValue.selectedSegmentIndex == 2{
+            let companyTitle = iGeneralTextField1.text
+            let businessNumber = iGeneralTextField2.text
+            let website = iGeneralTextField3.text
+            self.insert = ["id": id ?? "", "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? "", "businessNumber": businessNumber ?? "", "website": website ?? ""]
+        }
+        else {
+            
+        }
         
+        if id == "" || firstName == ""
+                       {
+                          
+                           let alertControll = UIAlertController(title: "Error!", message: "All fields are required", preferredStyle: .alert)
+                                      alertControll.addAction(UIAlertAction(title: "Ok", style: .default))
+                                      self.present(alertControll, animated: true, completion: nil)
+                       }
+        else{
+            let childUpdates = ["/Persons/\(key)": insert]
+                              self.ref.updateChildValues(childUpdates)
+            
+        }
     }
     
 
