@@ -38,4 +38,17 @@ class DataStorage{
     func getAllOwners() -> [Owner]{
         return self.ownerList
     }
+    func loadData() {
+        let personRefer = self.ref.child("Persons")
+        personRefer.observeSingleEvent(of: .value, with: {(snapshot)
+            in
+            if let personDict = snapshot.value as? [String: [String: String]]{
+                for value in personDict.values{
+                    if value["personType"] == "Customer"{
+                        self.customerList.append((Customer.init(id: value["id"] ?? "", firstName: value["firstName"] ?? "", lastName: value["lastName"] ?? "", gender: value["gender"] ?? "", birthDate: value["birthDate"] ?? "", mobileNumber: value["mobileNumber"] ?? "", emailId: value["email"] ?? "", userName: value["userName"] ?? "", password: value["password"] ?? "", address: value["address"] ?? "", city: value["city"] ?? "")))
+                    }
+                }
+            }
+        })
+    }
 }

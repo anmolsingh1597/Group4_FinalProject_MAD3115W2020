@@ -12,7 +12,7 @@ import Foundation
 {
     var address: String
       var city: String
-    init(id: String, firstName : String, lastName : String, gender : Enum.Gender, birthDate: String, mobileNumber : String, emailId : String, userName : String, password : String, address: String, city: String) {
+    init(id: String, firstName : String, lastName : String, gender : String, birthDate: String, mobileNumber : String, emailId : String, userName : String, password : String, address: String, city: String) {
         self.address = address
         self.city = city
         super.init(id: id, firstName: firstName, lastName: lastName, gender: gender, birthDate: birthDate, mobileNumber: mobileNumber, emailId: emailId, userName: userName, password: password)

@@ -11,7 +11,7 @@ class Owner: Person{
     var companyTitle: String
     var businessNumber: String
     var website: String
-    init(id: String, firstName: String, lastName: String, gender: Enum.Gender, birthDate: String, mobileNumber: String, emailId: String, userName: String, password: String, companyTitle: String, businessNumber: String, website: String) {
+    init(id: String, firstName: String, lastName: String, gender: String, birthDate: String, mobileNumber: String, emailId: String, userName: String, password: String, companyTitle: String, businessNumber: String, website: String) {
         self.businessNumber = businessNumber
         self.companyTitle = companyTitle
         self.website = website
