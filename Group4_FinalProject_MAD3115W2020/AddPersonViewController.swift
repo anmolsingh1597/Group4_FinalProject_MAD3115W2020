@@ -114,8 +114,8 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
             self.ref.updateChildValues(childUpdates)
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let showBillDetailsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
-            self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
+            let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
+            self.navigationController?.pushViewController(listsVC, animated: true)
         }
     }
     
