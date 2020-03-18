@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var iTableViewCustomer: UITableView!
     @IBOutlet weak var iTableDrivers: UITableView!
     @IBOutlet weak var iTableOwners: UITableView!
+    var customerList:[Customer] = []
+    var driverList: [Driver] = []
+    var ownerList: [Owner] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
