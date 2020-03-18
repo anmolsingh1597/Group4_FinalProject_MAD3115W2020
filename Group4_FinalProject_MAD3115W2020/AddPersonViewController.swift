@@ -94,7 +94,7 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
             let companyTitle = iGeneralTextField1.text
             let businessNumber = iGeneralTextField2.text
             let website = iGeneralTextField3.text
-            self.insert = ["id": "OWN_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? <#default value#> , "businessNumber": businessNumber ?? <#default value#> , "website": website ?? <#default value#> , "personType": "Owner"]
+            self.insert = ["id": "OWN_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? "" , "businessNumber": businessNumber ?? "" , "website": website ?? "" , "personType": "Owner"]
             
             DataStorage.getInstance().addOwner(owner: Owner.init(id: "OWN_" + (id ?? ""), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", companyTitle: companyTitle ?? "", businessNumber: businessNumber ?? "", website: website ?? ""))
         }
@@ -112,9 +112,10 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
         else{
             let childUpdates = ["/Persons/\(key)": insert]
             self.ref.updateChildValues(childUpdates)
-            let alertControll = UIAlertController(title: "Success!!", message: "User Added Successfully", preferredStyle: .alert)
-            alertControll.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alertControll,animated: true,completion: nil)
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let showBillDetailsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
+            self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
         }
     }
     
