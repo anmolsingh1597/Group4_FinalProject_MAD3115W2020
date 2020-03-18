@@ -369,6 +369,7 @@
                         <outlet property="iLastName" destination="GLc-ln-gPM" id="f2p-7S-8ND"/>
                         <outlet property="iMobileNumber" destination="GgJ-hT-QpC" id="Prc-2r-lzQ"/>
                         <outlet property="iPassword" destination="qkf-ne-tk5" id="Kdb-SD-fHO"/>
+                        <outlet property="iPersonSegmentValue" destination="ztD-9G-pr9" id="g6g-Qq-NWY"/>
                         <outlet property="iUserName" destination="NFW-qa-pdq" id="cri-so-KuQ"/>
                     </connections>
                 </viewController>
