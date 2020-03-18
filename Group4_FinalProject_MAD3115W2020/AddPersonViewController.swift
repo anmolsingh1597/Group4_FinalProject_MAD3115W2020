@@ -78,25 +78,25 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
         if iPersonSegmentValue.selectedSegmentIndex == 0{
             let address = iGeneralTextField1.text
             let city = iGeneralTextField2.text
-            self.insert = ["id": "CUS_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "", "address": address ?? "" , "city": city ?? "" , "personType": "Customer"]
+            self.insert = ["id": ("CUS_" + (id ?? "")), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "", "address": address ?? "" , "city": city ?? "" , "personType": "Customer"]
             
-            DataStorage.getInstance().addCustomer(customer: Customer.init(id: "CUS_" + (id ?? ""), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", address: address ?? "", city: city ?? ""))
+            DataStorage.getInstance().addCustomer(customer: Customer.init(id: ("CUS_" + (id ?? "")), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", address: address ?? "", city: city ?? ""))
         }
         else if iPersonSegmentValue.selectedSegmentIndex == 1{
             let drivingLicenseNumber = iGeneralTextField1.text
             let drivingHistory = iGeneralTextField2.text
             let salary = iGeneralTextField3.text
-            self.insert = ["id": "DRI_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","drivingLicenseNumber": drivingLicenseNumber ?? "" , "drivingHistory": drivingHistory ?? "" ,"salary": salary ?? "" , "personType": "Driver"]
+            self.insert = ["id": ("DRI_" + (id ?? "")), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","drivingLicenseNumber": drivingLicenseNumber ?? "" , "drivingHistory": drivingHistory ?? "" ,"salary": salary ?? "" , "personType": "Driver"]
             
-            DataStorage.getInstance().addDriver(driver: Driver.init(id: "DRI_" + (id ?? ""), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", drivingLicenceNumber: drivingLicenseNumber ?? "", isDrivingHistoryCleared: drivingHistory ?? "", salary: salary ?? ""))
+            DataStorage.getInstance().addDriver(driver: Driver.init(id: ("DRI_" + (id ?? "")), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", drivingLicenceNumber: drivingLicenseNumber ?? "", isDrivingHistoryCleared: drivingHistory ?? "", salary: salary ?? ""))
         }
         else if iPersonSegmentValue.selectedSegmentIndex == 2{
             let companyTitle = iGeneralTextField1.text
             let businessNumber = iGeneralTextField2.text
             let website = iGeneralTextField3.text
-            self.insert = ["id": "OWN_" + (id ?? ""), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? "" , "businessNumber": businessNumber ?? "" , "website": website ?? "" , "personType": "Owner"]
+            self.insert = ["id": ("OWN_" + (id ?? "")), "firstName": firstName ?? "", "lastName": lastName ?? "", "gender": gender ?? "", "birthDate": birthDate ?? "", "mobileNumber": mobileNumber ?? "", "email": email ?? "", "userName": userName ?? "","password": password ?? "","companyTitle": companyTitle ?? "" , "businessNumber": businessNumber ?? "" , "website": website ?? "" , "personType": "Owner"]
             
-            DataStorage.getInstance().addOwner(owner: Owner.init(id: "OWN_" + (id ?? ""), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", companyTitle: companyTitle ?? "", businessNumber: businessNumber ?? "", website: website ?? ""))
+            DataStorage.getInstance().addOwner(owner: Owner.init(id: ("OWN_" + (id ?? "")), firstName: firstName ?? "", lastName: lastName ?? "", gender: gender ?? "", birthDate: birthDate ?? "", mobileNumber: mobileNumber ?? "", emailId: email ?? "", userName: userName ?? "", password: password ?? "", companyTitle: companyTitle ?? "", businessNumber: businessNumber ?? "", website: website ?? ""))
         }
         else {
             
