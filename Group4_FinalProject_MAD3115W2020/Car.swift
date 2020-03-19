@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Car{
+class Car: Vehicle{
     var carType: String
     var carColor: String
+    
 }
