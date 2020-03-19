@@ -57,7 +57,7 @@ extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource
         iSelfDrive.text = selfDrive[row]
 }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        view.endEditing(true)
+//    }
 }
