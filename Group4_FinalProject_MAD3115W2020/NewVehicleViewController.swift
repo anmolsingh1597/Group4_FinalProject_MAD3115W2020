@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewVehicleViewController: UIViewController {
+class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iVIN: UITextField!
     @IBOutlet weak var iVehicleDescription: UITextField!
     @IBOutlet weak var iManufacturerName: UITextField!
@@ -26,7 +26,9 @@ class NewVehicleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        <#code#>
+    }
 
     /*
     // MARK: - Navigation
@@ -38,4 +40,15 @@ class NewVehicleViewController: UIViewController {
     }
     */
 
+}
+extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        <#code#>
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
+    }
+    
+    
 }
