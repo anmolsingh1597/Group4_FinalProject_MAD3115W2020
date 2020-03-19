@@ -26,6 +26,7 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         drivePicker.delegate = self
+        drivePicker.dataSource = self
         iSelfDrive.inputView = drivePicker
     }
   
