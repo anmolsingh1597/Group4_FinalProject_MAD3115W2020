@@ -15,6 +15,6 @@ class Motorcycle: Vehicle{
     init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, maxTopSpeed: String, milage: String) {
         self.maxTopSpeed = maxTopSpeed
         self.milage = milage
-        super.ini
+        super.init(vehicleIdentificationNumber: vehicleIdentificationNumber, vehicleDescription: vehicleDescription, manufacturerName: manufacturerName, isSelfDrive: isSelfDrive, driverName: driverName, isInsured: isInsured, noOfSeat: noOfSeat, fuelType: fuelType)
     }
 }
