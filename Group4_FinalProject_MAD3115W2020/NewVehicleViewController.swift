@@ -21,16 +21,14 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iGeneralTextField2: UITextField!
     @IBOutlet weak var iGeneralTextField3: UITextField!
     var selfDrive = ["Yes","No"]
-    var drivePicker: UIPickerView = UIPickerView()
+    let drivePicker = UIPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        drivePicker.delegate = self
+        iSelfDrive.inputView = drivePicker
     }
   
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        drivePicker.dataSource = self
-        drivePicker.delegate = self
-    }
     /*
     // MARK: - Navigation
 
@@ -46,16 +44,19 @@ extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.selfDrive.count
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.selfDrive[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(self.selfDrive[row])
+        iSelfDrive.text = selfDrive[row]
 }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
