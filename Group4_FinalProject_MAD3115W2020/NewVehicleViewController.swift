@@ -24,7 +24,6 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     var drivePicker: UIPickerView = UIPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldDidBeginEditing(iSelfDrive)
         // Do any additional setup after loading the view.
     }
   
