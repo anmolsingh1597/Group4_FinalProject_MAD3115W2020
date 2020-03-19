@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Vehicle List View Controller-->
+        <!--Vehicle Lst-->
         <scene sceneID="4m1-a8-kxS">
             <objects>
                 <viewController id="bQb-rH-p0e" customClass="VehicleListViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,6 +38,32 @@
                                 <rect key="frame" x="0.0" y="282" width="414" height="614"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="vehicleListCell" textLabel="s7v-IS-2rb" detailTextLabel="YUE-xx-NOb" style="IBUITableViewCellStyleValue1" id="ax4-KH-wyd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ax4-KH-wyd" id="xwu-gt-BJk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s7v-IS-2rb">
+                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YUE-xx-NOb">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="bQb-rH-p0e" id="4fK-6X-XhD"/>
                                     <outlet property="delegate" destination="bQb-rH-p0e" id="wJR-Vz-8to"/>
@@ -47,7 +73,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dzj-FR-EGU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xVv-YG-fb5">
+                    <navigationItem key="navigationItem" title="Vehicle Lst" id="xVv-YG-fb5">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2lG-C8-Hur">
                             <connections>
                                 <segue destination="isb-Cs-LIv" kind="show" id="DZv-o0-LXM"/>
@@ -59,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="-566.51785714285711"/>
         </scene>
-        <!--New Vehicle View Controller-->
+        <!--Add Vehicle-->
         <scene sceneID="Moj-lP-94t">
             <objects>
                 <viewController id="isb-Cs-LIv" customClass="NewVehicleViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +95,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CHa-k6-rcf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xTV-GA-pbb"/>
+                    <navigationItem key="navigationItem" title="Add Vehicle" id="xTV-GA-pbb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="JCR-wr-C7S"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-1O-yOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -36,7 +36,11 @@ extension VehicleListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        return UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleListCell")
+        cell?.textLabel?.text = "hi"
+        cell?.detailTextLabel?.text = "hello"
+        
+        return cell!
     }
     
     
