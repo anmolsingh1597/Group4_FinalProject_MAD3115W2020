@@ -80,6 +80,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="iFirstName" destination="MV9-tU-5aM" id="gj6-Dw-EKl"/>
+                        <outlet property="iOwnerID" destination="VE1-go-pcM" id="SSv-o6-fYp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EeQ-DE-jYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

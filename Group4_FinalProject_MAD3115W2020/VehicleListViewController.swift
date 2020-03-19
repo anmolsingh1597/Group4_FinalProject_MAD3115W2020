@@ -10,12 +10,15 @@ import UIKit
 
 class VehicleListViewController: UIViewController {
 
+    @IBOutlet weak var iOwnerID: UILabel!
+    @IBOutlet weak var iFirstName: UILabel!
     static var ownerId = String()
     static var firstName = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        iOwnerID.text = VehicleListViewController.ownerId
+        iFirstName.text = VehicleListViewController.firstName
     }
     
 
