@@ -9,5 +9,6 @@
 import Foundation
 
 class Car{
-    
+    var carType: String
+    var carColor: String
 }
