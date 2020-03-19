@@ -38,11 +38,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dzj-FR-EGU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xVv-YG-fb5"/>
+                    <navigationItem key="navigationItem" id="xVv-YG-fb5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2lG-C8-Hur">
+                            <connections>
+                                <segue destination="isb-Cs-LIv" kind="show" id="DZv-o0-LXM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EeQ-DE-jYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="-566.51785714285711"/>
+        </scene>
+        <!--New Vehicle View Controller-->
+        <scene sceneID="Moj-lP-94t">
+            <objects>
+                <viewController id="isb-Cs-LIv" customClass="NewVehicleViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FK5-PN-w9T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CHa-k6-rcf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xTV-GA-pbb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-1O-yOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3804" y="-567"/>
         </scene>
         <!--Lists-->
         <scene sceneID="tne-QT-ifu">
