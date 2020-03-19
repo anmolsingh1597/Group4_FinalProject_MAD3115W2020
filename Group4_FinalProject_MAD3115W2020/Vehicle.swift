@@ -16,7 +16,6 @@ class Vehicle{
     var isSelfDrive: String
     var driverName: String
     var isInsured: String
-//    var insuranceProviderName: String
     var noOfSeat: String
     var fuelType: String
 //    var baseRate: Double = 0.0
