@@ -22,14 +22,25 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iGeneralTextField3: UITextField!
     var selfDrive = ["Yes","No"]
     let drivePicker = UIPickerView()
+    var driverList: [Driver] = []
+    var driverName: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        drivePicker.delegate = self
-        drivePicker.dataSource = self
-        iSelfDrive.inputView = drivePicker
+        intials()
     }
   
+    func intials(){
+        drivePicker.delegate = self
+        drivePicker.dataSource = self
+        drivePicker.backgroundColor = UIColor.white
+        iSelfDrive.inputView = drivePicker
+        driverList = DataStorage.getInstance().getAllDrivers()
+        for index in 0...driverList.count-1{
+            driverName.append(driverList[index].firstName)
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -34,6 +34,7 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
         // Do any additional setup after loading the view.
         genderPicker.delegate = self
         genderPicker.dataSource = self
+        genderPicker.backgroundColor = UIColor.white
         iGender.inputView = genderPicker
     }
     
