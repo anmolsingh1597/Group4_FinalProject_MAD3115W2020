@@ -26,10 +26,15 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iPersonSegmentValue: UISegmentedControl!
     var insert: [String: String] = [String: String]()
     var datePicker : UIDatePicker!
+    var gender = ["Male", "Female", "Other"]
+    let genderPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        genderPicker.delegate = self
+        genderPicker.dataSource = self
+        iGender.inputView = genderPicker
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -132,7 +137,21 @@ class AddPersonViewController: UIViewController, UITextFieldDelegate{
 
 }
 
-extension AddPersonViewController{
+extension AddPersonViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.gender.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.gender[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        iGender.text = gender[row]
+    }
+    
     func pickUpDate(_ textField : UITextField){
              
              // DatePicker
