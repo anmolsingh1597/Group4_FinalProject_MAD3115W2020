@@ -12,7 +12,9 @@ class Motorcycle: Vehicle{
     var maxTopSpeed: String
     var milage: String
     
-    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, ) {
-        <#statements#>
+    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, maxTopSpeed: String, milage: String) {
+        self.maxTopSpeed = maxTopSpeed
+        self.milage = milage
+        super.ini
     }
 }
