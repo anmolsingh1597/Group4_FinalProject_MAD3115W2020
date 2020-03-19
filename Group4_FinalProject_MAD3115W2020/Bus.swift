@@ -12,4 +12,7 @@ class Bus: Vehicle{
     var typeOfBus: String
     var isAccessibilityServiceavailable: String
     var isWifiAvailable: String
+    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, typeOfBus: String, isAccessibilityServiceavailable: String, isWifiAvailable:String){
+        
+    }
 }
