@@ -24,6 +24,7 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     let drivePicker = UIPickerView()
     var driverList: [Driver] = []
     var driverName: [String] = []
+    let driverNamePicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,12 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     func intials(){
         drivePicker.delegate = self
         drivePicker.dataSource = self
+        driverNamePicker.delegate = self
+        driverNamePicker.dataSource = self
         drivePicker.backgroundColor = UIColor.white
+        driverNamePicker.backgroundColor = UIColor.white
         iSelfDrive.inputView = drivePicker
+        iDriverName.inputView = driverNamePicker
         driverList = DataStorage.getInstance().getAllDrivers()
         for index in 0...driverList.count-1{
             driverName.append(driverList[index].firstName)
@@ -58,14 +63,27 @@ extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.selfDrive.count
+        if pickerView == drivePicker{
+            return self.selfDrive.count}
+       else if pickerView == driverNamePicker{
+            return self.driverName.count
+        }
+        return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.selfDrive[row]
+        if pickerView == drivePicker{
+            return self.selfDrive[row]}
+        else if pickerView == driverNamePicker{
+                  return self.driverName[row]
+              }
+        return self.driverName[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        iSelfDrive.text = selfDrive[row]
+         if pickerView == drivePicker{
+            iSelfDrive.text = selfDrive[row]}
+        else if pickerView == driverNamePicker{
+            iDriverName.text = driverName[row]}
 }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
