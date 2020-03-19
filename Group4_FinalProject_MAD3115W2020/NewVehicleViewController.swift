@@ -9,7 +9,18 @@
 import UIKit
 
 class NewVehicleViewController: UIViewController {
-
+    @IBOutlet weak var iVIN: UITextField!
+    @IBOutlet weak var iVehicleDescription: UITextField!
+    @IBOutlet weak var iManufacturerName: UITextField!
+    @IBOutlet weak var iSelfDrive: UITextField!
+    @IBOutlet weak var iDriverName: UITextField!
+    @IBOutlet weak var iIsInsured: UITextField!
+    @IBOutlet weak var iNoOfSeats: UITextField!
+    @IBOutlet weak var iFuelType: UITextField!
+    @IBOutlet weak var iGeneralTextField1: UITextField!
+    @IBOutlet weak var iGeneralTextField2: UITextField!
+    @IBOutlet weak var iGeneralTextField3: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

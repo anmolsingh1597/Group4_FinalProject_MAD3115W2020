@@ -208,6 +208,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MWs-Yp-10A">
+                                <rect key="frame" x="20" y="351" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Motorcycle"/>
+                                    <segment title="Car"/>
+                                    <segment title="Bus"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max Top Speed" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5d-qR-XY9">
+                                <rect key="frame" x="19" y="395" width="368" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Milage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Xg-9ti">
+                                <rect key="frame" x="19" y="436" width="368" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="iGeneralTextField3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tyd-qU-ydo">
+                                <rect key="frame" x="19" y="477" width="368" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CHa-k6-rcf"/>
@@ -215,10 +245,23 @@
                     <navigationItem key="navigationItem" title="Add Vehicle" id="xTV-GA-pbb">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="JCR-wr-C7S"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="iDriverName" destination="pPt-97-wZn" id="FY8-ms-Yuu"/>
+                        <outlet property="iFuelType" destination="f2C-oI-EXd" id="QaR-ho-hwD"/>
+                        <outlet property="iGeneralTextField1" destination="e5d-qR-XY9" id="eUM-Kl-AHU"/>
+                        <outlet property="iGeneralTextField2" destination="KUn-Xg-9ti" id="JXk-kJ-r8g"/>
+                        <outlet property="iGeneralTextField3" destination="Tyd-qU-ydo" id="Vpg-rv-QmT"/>
+                        <outlet property="iIsInsured" destination="95w-Lf-paD" id="Qkh-ND-cfr"/>
+                        <outlet property="iManufacturerName" destination="BNF-qJ-qfk" id="G8e-YM-GR7"/>
+                        <outlet property="iNoOfSeats" destination="SPn-Ew-e6B" id="PEt-cl-s0J"/>
+                        <outlet property="iSelfDrive" destination="IpV-iR-bdi" id="Th8-Bs-kfJ"/>
+                        <outlet property="iVIN" destination="pKD-Ym-z7V" id="6h3-2v-LDc"/>
+                        <outlet property="iVehicleDescription" destination="qTI-cz-rcq" id="ONR-Px-MVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-1O-yOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="-567"/>
+            <point key="canvasLocation" x="3802.898550724638" y="-567.1875"/>
         </scene>
         <!--Lists-->
         <scene sceneID="tne-QT-ifu">
