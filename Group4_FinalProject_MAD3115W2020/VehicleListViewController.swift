@@ -10,6 +10,8 @@ import UIKit
 
 class VehicleListViewController: UIViewController {
 
+    static var ownerId = String()
+    static var firstName = String()
     override func viewDidLoad() {
         super.viewDidLoad()
 

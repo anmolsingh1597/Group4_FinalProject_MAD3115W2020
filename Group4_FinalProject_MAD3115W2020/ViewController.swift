@@ -98,5 +98,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == iTableOwners{
+            let person = ownerList[indexPath.row]
+            VehicleListViewController.ownerId = person.id
+            VehicleListViewController.firstName = person.firstName
+        }
+    }
+    
     
 }
