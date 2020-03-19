@@ -81,9 +81,15 @@ extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
          if pickerView == drivePicker{
-            iSelfDrive.text = selfDrive[row]}
-        else if pickerView == driverNamePicker{
-            iDriverName.text = driverName[row]}
+            iSelfDrive.text = selfDrive[row]
+            if iSelfDrive.text == "Yes"{
+                iDriverName.text = "None"
+            }
+         }else if pickerView == driverNamePicker{
+            iDriverName.text = driverName[row]
+            
+        }
+   
 }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
