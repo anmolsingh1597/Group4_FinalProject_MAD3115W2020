@@ -46,6 +46,31 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
             driverName.append(driverList[index].firstName)
         }
     }
+    @IBAction func iVehicleTypeSegment(_ sender: UISegmentedControl) {
+        segmentValue(index: sender.selectedSegmentIndex)
+    }
+    
+    private func segmentValue(index: Int){
+        switch index {
+        case 0:
+            iGeneralTextField1.placeholder = "Max Top Speed"
+            iGeneralTextField2.placeholder = "Mileage"
+            iGeneralTextField3.isHidden = true
+        case 1:
+            iGeneralTextField1.placeholder = "Car Type"
+            iGeneralTextField2.placeholder = "Car Color"
+            iGeneralTextField3.isHidden = true
+        case 2:
+            iGeneralTextField1.placeholder = "Type of Bus"
+            iGeneralTextField2.placeholder = "Accessibility Service"
+            iGeneralTextField3.isHidden = false
+            iGeneralTextField3.placeholder = "Wifi"
+        default:
+                iGeneralTextField1.isHidden = true
+                iGeneralTextField2.isHidden = true
+                iGeneralTextField3.isHidden = false
+        }
+    }
     /*
     // MARK: - Navigation
 

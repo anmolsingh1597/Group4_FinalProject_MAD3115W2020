@@ -220,6 +220,9 @@
                                     <segment title="Car"/>
                                     <segment title="Bus"/>
                                 </segments>
+                                <connections>
+                                    <action selector="iVehicleTypeSegment:" destination="isb-Cs-LIv" eventType="valueChanged" id="dUA-ob-yLg"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max Top Speed" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5d-qR-XY9">
                                 <rect key="frame" x="19" y="395" width="368" height="23"/>
