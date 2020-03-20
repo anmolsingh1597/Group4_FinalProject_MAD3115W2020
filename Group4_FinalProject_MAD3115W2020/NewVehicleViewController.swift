@@ -108,6 +108,7 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
                                              alertControll.addAction(UIAlertAction(title: "Ok", style: .default))
                                              self.present(alertControll, animated: true, completion: nil)
         }else {
+            DataStorage.getInstance().addVehicle(vehicle: Vehicle(vehicleIdentificationNumber: vin ?? "", vehicleDescription: vehicleDescription ?? "", manufacturerName: manufacturerName ?? "", isSelfDrive: selfDrive ?? "", driverName: driverName ?? "", isInsured: isInsured ?? "", noOfSeat: noOfSeats ?? "", fuelType: fuelTyoe ?? "", ownerId: NewVehicleViewController.ownerId))
             let childUpdates = ["/Vehicles/\(key)": insert]
                        self.ref.updateChildValues(childUpdates)
                        
