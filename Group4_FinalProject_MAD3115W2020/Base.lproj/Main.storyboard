@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Vehicle Lst-->
+        <!--Vehicle List-->
         <scene sceneID="4m1-a8-kxS">
             <objects>
-                <viewController id="bQb-rH-p0e" customClass="VehicleListViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vehicleListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bQb-rH-p0e" customClass="VehicleListViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JMF-FG-jLv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dzj-FR-EGU"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Vehicle Lst" id="xVv-YG-fb5">
+                    <navigationItem key="navigationItem" title="Vehicle List" id="xVv-YG-fb5">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2lG-C8-Hur">
                             <connections>
                                 <segue destination="isb-Cs-LIv" kind="show" id="DZv-o0-LXM"/>
@@ -268,6 +268,7 @@
                         <outlet property="iSelfDrive" destination="IpV-iR-bdi" id="Th8-Bs-kfJ"/>
                         <outlet property="iVIN" destination="pKD-Ym-z7V" id="6h3-2v-LDc"/>
                         <outlet property="iVehicleDescription" destination="qTI-cz-rcq" id="ONR-Px-MVd"/>
+                        <outlet property="iVehicleSegmentValue" destination="MWs-Yp-10A" id="K9T-II-2Ap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-1O-yOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

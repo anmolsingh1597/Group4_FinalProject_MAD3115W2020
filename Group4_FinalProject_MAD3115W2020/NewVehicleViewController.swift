@@ -21,7 +21,9 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iGeneralTextField1: UITextField!
     @IBOutlet weak var iGeneralTextField2: UITextField!
     @IBOutlet weak var iGeneralTextField3: UITextField!
+    @IBOutlet weak var iVehicleSegmentValue: UISegmentedControl!
     var ref = Database.database().reference()
+    var insert: [String: String] = [String: String]()
     var selfDrive = ["Yes","No"]
     let drivePicker = UIPickerView()
     var driverList: [Driver] = []
@@ -74,6 +76,44 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
         }
     }
     @IBAction func iSaveVehicleValues(_ sender: UIBarButtonItem) {
+        let vin = self.iVIN.text
+        let vehicleDescription = self.iVehicleDescription.text
+        let manufacturerName = self.iManufacturerName.text
+        let selfDrive = self.iSelfDrive.text
+        let driverName = self.iDriverName.text
+        let isInsured = self.iIsInsured.text
+        let noOfSeats = self.iNoOfSeats.text
+        let fuelTyoe = self.iFuelType.text
+         guard let key = self.ref.child("Vehicles").childByAutoId().key else {return}
+        if iVehicleSegmentValue.selectedSegmentIndex == 0{
+            let maxTopSpeed = iGeneralTextField1.text
+            let milage = iGeneralTextField2.text
+            self.insert = ["vin": ("M000"+(vin ?? "")), "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "maxTopSpeed": maxTopSpeed ?? "", "milage": milage ?? ""]
+        }else if iVehicleSegmentValue.selectedSegmentIndex == 1{
+            let carType = iGeneralTextField1.text
+            let carColor = iGeneralTextField2.text
+            self.insert = ["vin": ("M000"+(vin ?? "")), "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "carType": carType ?? "", "carColor": carColor ?? ""]
+        }else if iVehicleSegmentValue.selectedSegmentIndex == 2{
+            let typeOfBus = iGeneralTextField1.text
+            let accessibility = iGeneralTextField2.text
+            let wifi = iGeneralTextField3.text
+            self.insert = ["vin": ("M000"+(vin ?? "")), "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "typeOfBus": typeOfBus ?? "", "isAccessibilityAvailable": accessibility ?? "", "isWifiAvailable": wifi ?? ""]
+        }
+        else{
+            
+        }
+        if vin == ""||vehicleDescription == ""{
+        let alertControll = UIAlertController(title: "Error!", message: "All fields are required", preferredStyle: .alert)
+                                             alertControll.addAction(UIAlertAction(title: "Ok", style: .default))
+                                             self.present(alertControll, animated: true, completion: nil)
+        }else {
+            let childUpdates = ["/Vehicles/\(key)": insert]
+                       self.ref.updateChildValues(childUpdates)
+                       
+                       let sb = UIStoryboard(name: "Main", bundle: nil)
+                       let listsVC = sb.instantiateViewController(identifier: "vehicleListVC") as! VehicleListViewController
+                       self.navigationController?.pushViewController(listsVC, animated: true)
+        }
     }
     /*
     // MARK: - Navigation
