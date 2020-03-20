@@ -12,10 +12,10 @@ class Bus: Vehicle{
     var typeOfBus: String
     var isAccessibilityServiceavailable: String
     var isWifiAvailable: String
-    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, typeOfBus: String, isAccessibilityServiceavailable: String, isWifiAvailable:String){
+    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, ownerId: String, typeOfBus: String, isAccessibilityServiceavailable: String, isWifiAvailable:String){
         self.typeOfBus = typeOfBus
         self.isAccessibilityServiceavailable = isAccessibilityServiceavailable
         self.isWifiAvailable = isWifiAvailable
-        super.init(vehicleIdentificationNumber: vehicleIdentificationNumber, vehicleDescription: vehicleDescription, manufacturerName: manufacturerName, isSelfDrive: isSelfDrive, driverName: driverName, isInsured: isInsured, noOfSeat: noOfSeat, fuelType: fuelType)
+        super.init(vehicleIdentificationNumber: vehicleIdentificationNumber, vehicleDescription: vehicleDescription, manufacturerName: manufacturerName, isSelfDrive: isSelfDrive, driverName: driverName, isInsured: isInsured, noOfSeat: noOfSeat, fuelType: fuelType, ownerId: ownerId)
     }
 }

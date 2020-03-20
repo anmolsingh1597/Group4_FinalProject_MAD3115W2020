@@ -18,9 +18,10 @@ class Vehicle{
     var isInsured: String
     var noOfSeat: String
     var fuelType: String
+    var ownerId: String
 //    var baseRate: Double = 0.0
 //    var ratePerKm: Double = 0.0
-    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String) {
+    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, ownerId: String) {
         self.vehicleIdentificationNumber = vehicleIdentificationNumber
         self.vehicleDescription = vehicleDescription
         self.manufacturerName = manufacturerName
@@ -29,5 +30,6 @@ class Vehicle{
         self.isInsured = isInsured
         self.noOfSeat = noOfSeat
         self.fuelType = fuelType
+        self.ownerId = ownerId
     }
 }
