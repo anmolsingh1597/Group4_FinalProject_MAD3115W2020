@@ -14,11 +14,15 @@ class VehicleListViewController: UIViewController {
     @IBOutlet weak var iFirstName: UILabel!
     static var ownerId = String()
     static var firstName = String()
+    var vehicleList: [Vehicle] = []
+    var vehicleFilteredArray: [Vehicle] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         iOwnerID.text = VehicleListViewController.ownerId
         iFirstName.text = VehicleListViewController.firstName
+        vehicleList = DataStorage.getInstance().getAllVehicles()
+        vehicleFilteredArray = vehicleList.filter{$0.ownerId == VehicleListViewController.ownerId}
     }
     @IBAction func iLists(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -41,14 +45,20 @@ class VehicleListViewController: UIViewController {
 
 extension VehicleListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return vehicleFilteredArray.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
         let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleListCell")
-        cell?.textLabel?.text = "hi"
-        cell?.detailTextLabel?.text = "hello"
+        if vehicleFilteredArray.isEmpty == true{
+            
+        }else{
+            let vehicle = vehicleFilteredArray[indexPath.row]
+            cell?.textLabel?.text = vehicle.vehicleDescription
+            cell?.detailTextLabel?.text = vehicle.vehicleIdentificationNumber
+            
+        }
         
         return cell!
     }
