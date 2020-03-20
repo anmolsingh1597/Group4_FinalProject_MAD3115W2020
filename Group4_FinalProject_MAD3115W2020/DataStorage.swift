@@ -105,7 +105,10 @@ class DataStorage{
             in
             if let vehicleDict = snapshot.value as? [String: [String: String]]{
                 for value in vehicleDict.values{
-                    self.vehicleList.append((Vehicle(vehicleIdentificationNumber: value["vin"] ?? "", vehicleDescription: value["vehicleDescription"] ?? "", manufacturerName: value["manufacturerName"] ?? "", isSelfDrive: value["selfDrive"] ?? "", driverName: value["driverName"] ?? "", isInsured: value["isInsured"] ?? "", noOfSeat: value["noOfSeats"] ?? "", fuelType: value["fuelType"] ?? "")))
+                    self.vehicleList.append((Vehicle(vehicleIdentificationNumber: value["vin"] ?? "", vehicleDescription: value["vehicleDescription"] ?? "", manufacturerName: value["manufacturerName"] ?? "", isSelfDrive: value["selfDrive"] ?? "", driverName: value["driverName"] ?? "", isInsured: value["isInsured"] ?? "", noOfSeat: value["noOfSeats"] ?? "", fuelType: value["fuelType"] ?? "", ownerId: value["ownerId"] ?? "")))
+                    if value["vehicleType"] == "Motorcycle"{
+                        self.motorcycleList.append((Motorcycle(vehicleIdentificationNumber: value["vin"] ?? "", vehicleDescription: value["vehicleDescription"] ?? "", manufacturerName: value["manufacturerName"] ?? "", isSelfDrive: value["selfDrive"] ?? "", driverName: value["driverName"] ?? "", isInsured: value["isInsured"] ?? "", noOfSeat: value["noOfSeats"] ?? "", fuelType: value["fuelType"] ?? "", ownerId: value["ownerId"] ?? "", maxTopSpeed: value["maxTopSpeed"] ?? "", milage: value["milage"] ?? "")))
+                    }else if
                 }
             }
         })
