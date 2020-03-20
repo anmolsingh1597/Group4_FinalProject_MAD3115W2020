@@ -430,6 +430,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lists" id="UGd-hs-E4A">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="tfe-GX-Q5u">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tvP-Bv-hMT">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="iHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KkV-hL-ipf"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="iHome:" destination="BYZ-38-t0r" id="HiF-1b-40R"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="n8k-Ua-xoK">
                             <connections>
                                 <segue destination="oII-ek-cvc" kind="show" id="Xq9-Tw-zaN"/>
@@ -651,10 +664,10 @@
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ujd-4m-wxd">
             <objects>
-                <viewController id="Ltt-Mg-a8c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ltt-Mg-a8c" customClass="HomeViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQd-9X-ryW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
