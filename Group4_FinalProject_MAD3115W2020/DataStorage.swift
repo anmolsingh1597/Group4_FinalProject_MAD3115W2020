@@ -110,6 +110,11 @@ class DataStorage{
                         self.motorcycleList.append((Motorcycle(vehicleIdentificationNumber: value["vin"] ?? "", vehicleDescription: value["vehicleDescription"] ?? "", manufacturerName: value["manufacturerName"] ?? "", isSelfDrive: value["selfDrive"] ?? "", driverName: value["driverName"] ?? "", isInsured: value["isInsured"] ?? "", noOfSeat: value["noOfSeats"] ?? "", fuelType: value["fuelType"] ?? "", ownerId: value["ownerId"] ?? "", maxTopSpeed: value["maxTopSpeed"] ?? "", milage: value["milage"] ?? "")))
                     }else if value["vehicleType"] == "Car"{
                         self.carList.append((Car(vehicleIdentificationNumber: value["vin"] ?? "", vehicleDescription: value["vehicleDescription"] ?? "", manufacturerName: value["manufacturerName"] ?? "", isSelfDrive: value["selfDrive"] ?? "", driverName: value["driverName"] ?? "", isInsured: value["isInsured"] ?? "", noOfSeat: value["noOfSeats"] ?? "", fuelType: value["fuelType"] ?? "", ownerId: value["ownerId"] ?? "", carType: value["carType"] ?? "", carColor: value["carColor"] ?? "")))
+                    }else if value["vehicleType"] == "Bus"{
+                        self.busList.append((Bus(vehicleIdentificationNumber: value["vin"] ?? "", vehicleDescription: value["vehicleDescription"] ?? "", manufacturerName: value["manufacturerName"] ?? "", isSelfDrive: value["selfDrive"] ?? "", driverName: value["driverName"] ?? "", isInsured: value["isInsured"] ?? "", noOfSeat: value["noOfSeats"] ?? "", fuelType: value["fuelType"] ?? "", ownerId: value["ownerId"] ?? "", typeOfBus: value["typeOfBus"] ?? "", isAccessibilityServiceavailable: value["isAccessibilityAvailable"] ?? "", isWifiAvailable: value["isWifiAvailable"] ?? "")))
+                    }
+                    else {
+                        
                     }
                 }
             }
