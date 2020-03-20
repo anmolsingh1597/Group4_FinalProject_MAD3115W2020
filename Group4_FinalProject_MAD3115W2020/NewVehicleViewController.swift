@@ -88,16 +88,16 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
         if iVehicleSegmentValue.selectedSegmentIndex == 0{
             let maxTopSpeed = iGeneralTextField1.text
             let milage = iGeneralTextField2.text
-            self.insert = ["vin": ("M000"+(vin ?? "")), "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "maxTopSpeed": maxTopSpeed ?? "", "milage": milage ?? ""]
+            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "maxTopSpeed": maxTopSpeed ?? "", "milage": milage ?? ""]
         }else if iVehicleSegmentValue.selectedSegmentIndex == 1{
             let carType = iGeneralTextField1.text
             let carColor = iGeneralTextField2.text
-            self.insert = ["vin": ("M000"+(vin ?? "")), "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "carType": carType ?? "", "carColor": carColor ?? ""]
+            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "carType": carType ?? "", "carColor": carColor ?? ""]
         }else if iVehicleSegmentValue.selectedSegmentIndex == 2{
             let typeOfBus = iGeneralTextField1.text
             let accessibility = iGeneralTextField2.text
             let wifi = iGeneralTextField3.text
-            self.insert = ["vin": ("M000"+(vin ?? "")), "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "typeOfBus": typeOfBus ?? "", "isAccessibilityAvailable": accessibility ?? "", "isWifiAvailable": wifi ?? ""]
+            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "typeOfBus": typeOfBus ?? "", "isAccessibilityAvailable": accessibility ?? "", "isWifiAvailable": wifi ?? ""]
         }
         else{
             
