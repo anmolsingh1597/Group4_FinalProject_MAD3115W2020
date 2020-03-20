@@ -35,7 +35,6 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         intials()
-        print(NewVehicleViewController.ownerId)
     }
   
     func intials(){

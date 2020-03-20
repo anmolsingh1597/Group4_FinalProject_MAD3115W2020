@@ -15,6 +15,10 @@ class DataStorage{
     private lazy var customerList: [Customer] = []
     private lazy var driverList: [Driver] = []
     private lazy var ownerList: [Owner] = []
+//    private lazy var vehicleList: [Vehicle] = []
+    private lazy var motorcycleList: [Motorcycle] = []
+    private lazy var carList: [Car] = []
+    private lazy var busList: [Bus] = []
     private init (){}
     
     static func getInstance() -> DataStorage{
@@ -28,6 +32,15 @@ class DataStorage{
     }
     func addOwner(owner: Owner){
         self.ownerList.append(owner)
+    }
+    func addMotorcycle(motorcycle: Motorcycle){
+        self.motorcycleList.append(motorcycle)
+    }
+    func addCar(car: Car){
+        self.carList.append(car)
+    }
+    func addBus(bus: Bus){
+        self.busList.append(bus)
     }
     func getAllCustomers() -> [Customer]{
         return self.customerList
