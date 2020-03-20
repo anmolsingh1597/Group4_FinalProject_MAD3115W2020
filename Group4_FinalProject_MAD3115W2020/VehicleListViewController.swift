@@ -20,6 +20,11 @@ class VehicleListViewController: UIViewController {
         iOwnerID.text = VehicleListViewController.ownerId
         iFirstName.text = VehicleListViewController.firstName
     }
+    @IBAction func iLists(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+              let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
+              self.navigationController?.pushViewController(listsVC, animated: true)
+    }
     
 
     /*

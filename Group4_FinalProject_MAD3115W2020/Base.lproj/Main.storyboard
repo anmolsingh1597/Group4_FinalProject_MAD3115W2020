@@ -74,6 +74,16 @@
                         <viewLayoutGuide key="safeArea" id="dzj-FR-EGU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Vehicle List" id="xVv-YG-fb5">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="tot-n9-h98">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LX1-0p-6LQ">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Lists"/>
+                                <connections>
+                                    <action selector="iLists:" destination="bQb-rH-p0e" eventType="touchUpInside" id="ND3-4g-N3o"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2lG-C8-Hur">
                             <connections>
                                 <segue destination="isb-Cs-LIv" kind="show" id="DZv-o0-LXM"/>
