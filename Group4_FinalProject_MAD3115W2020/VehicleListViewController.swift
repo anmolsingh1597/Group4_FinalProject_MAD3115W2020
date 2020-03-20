@@ -22,6 +22,9 @@ class VehicleListViewController: UIViewController {
         iOwnerID.text = VehicleListViewController.ownerId
         iFirstName.text = VehicleListViewController.firstName
         vehicleList = DataStorage.getInstance().getAllVehicles()
+        
+        // vehicleList array filtered according to Owner_id
+        
         vehicleFilteredArray = vehicleList.filter{$0.ownerId == VehicleListViewController.ownerId}
     }
     @IBAction func iLists(_ sender: UIButton) {
