@@ -109,6 +109,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             let person = ownerList[indexPath.row]
             VehicleListViewController.ownerId = person.id
             VehicleListViewController.firstName = person.firstName
+            NewVehicleViewController.ownerId = person.id
         }
     }
     

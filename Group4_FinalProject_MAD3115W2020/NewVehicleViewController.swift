@@ -29,11 +29,13 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     var driverList: [Driver] = []
     var driverName: [String] = []
     let driverNamePicker = UIPickerView()
+    static var ownerId: String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         intials()
+        print(NewVehicleViewController.ownerId)
     }
   
     func intials(){
@@ -88,16 +90,16 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
         if iVehicleSegmentValue.selectedSegmentIndex == 0{
             let maxTopSpeed = iGeneralTextField1.text
             let milage = iGeneralTextField2.text
-            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "maxTopSpeed": maxTopSpeed ?? "", "milage": milage ?? "", "vehicleType": "Motorcycle"]
+            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "maxTopSpeed": maxTopSpeed ?? "", "milage": milage ?? "", "vehicleType": "Motorcycle", "ownerId": NewVehicleViewController.ownerId]
         }else if iVehicleSegmentValue.selectedSegmentIndex == 1{
             let carType = iGeneralTextField1.text
             let carColor = iGeneralTextField2.text
-            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "carType": carType ?? "", "carColor": carColor ?? "", "vehicleType": "Car"]
+            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "carType": carType ?? "", "carColor": carColor ?? "", "vehicleType": "Car", "ownerId": NewVehicleViewController.ownerId]
         }else if iVehicleSegmentValue.selectedSegmentIndex == 2{
             let typeOfBus = iGeneralTextField1.text
             let accessibility = iGeneralTextField2.text
             let wifi = iGeneralTextField3.text
-            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "typeOfBus": typeOfBus ?? "", "isAccessibilityAvailable": accessibility ?? "", "isWifiAvailable": wifi ?? "", "vehicleType": "Bus"]
+            self.insert = ["vin": vin ?? "", "vehicleDescription": vehicleDescription ?? "", "manufacturerName": manufacturerName ?? "", "selfDrive": selfDrive ?? "", "driverName": driverName ?? "", "isInsured": isInsured ?? "", "noOfSeats": noOfSeats ?? "", "fuelType": fuelTyoe ?? "", "typeOfBus": typeOfBus ?? "", "isAccessibilityAvailable": accessibility ?? "", "isWifiAvailable": wifi ?? "", "vehicleType": "Bus", "ownerId": NewVehicleViewController.ownerId]
         }
         else{
             
