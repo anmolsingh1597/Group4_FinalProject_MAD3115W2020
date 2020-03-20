@@ -55,7 +55,7 @@ extension VehicleListViewController: UITableViewDelegate, UITableViewDataSource{
             
         }else{
             let vehicle = vehicleFilteredArray[indexPath.row]
-            cell?.textLabel?.text = vehicle.vehicleDescription
+            cell?.textLabel?.text = vehicle.manufacturerName + " " + vehicle.vehicleDescription
             cell?.detailTextLabel?.text = vehicle.vehicleIdentificationNumber
             
         }

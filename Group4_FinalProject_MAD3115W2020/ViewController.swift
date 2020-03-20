@@ -53,9 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func iHome(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let listsVC = sb.instantiateViewController(identifier: "homeVC") as! HomeViewController
-        self.navigationController?.pushViewController(listsVC, animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
