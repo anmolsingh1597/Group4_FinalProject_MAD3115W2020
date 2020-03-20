@@ -250,7 +250,11 @@
                         <viewLayoutGuide key="safeArea" id="CHa-k6-rcf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Vehicle" id="xTV-GA-pbb">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="JCR-wr-C7S"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="JCR-wr-C7S">
+                            <connections>
+                                <action selector="iSaveVehicleValues:" destination="isb-Cs-LIv" id="viP-uO-bGn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="iDriverName" destination="pPt-97-wZn" id="FY8-ms-Yuu"/>

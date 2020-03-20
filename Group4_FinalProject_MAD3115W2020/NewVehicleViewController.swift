@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iVIN: UITextField!
@@ -20,6 +21,7 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var iGeneralTextField1: UITextField!
     @IBOutlet weak var iGeneralTextField2: UITextField!
     @IBOutlet weak var iGeneralTextField3: UITextField!
+    var ref = Database.database().reference()
     var selfDrive = ["Yes","No"]
     let drivePicker = UIPickerView()
     var driverList: [Driver] = []
@@ -70,6 +72,8 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
                 iGeneralTextField2.isHidden = true
                 iGeneralTextField3.isHidden = false
         }
+    }
+    @IBAction func iSaveVehicleValues(_ sender: UIBarButtonItem) {
     }
     /*
     // MARK: - Navigation
