@@ -108,7 +108,14 @@ class NewVehicleViewController: UIViewController, UITextFieldDelegate{
                                              alertControll.addAction(UIAlertAction(title: "Ok", style: .default))
                                              self.present(alertControll, animated: true, completion: nil)
         }else {
-            DataStorage.getInstance().addVehicle(vehicle: Vehicle(vehicleIdentificationNumber: vin ?? "", vehicleDescription: vehicleDescription ?? "", manufacturerName: manufacturerName ?? "", isSelfDrive: selfDrive ?? "", driverName: driverName ?? "", isInsured: isInsured ?? "", noOfSeat: noOfSeats ?? "", fuelType: fuelTyoe ?? "", ownerId: NewVehicleViewController.ownerId))
+            if iVehicleSegmentValue.selectedSegmentIndex == 0{
+                DataStorage.getInstance().addVehicle(vehicle: Vehicle(vehicleIdentificationNumber: vin ?? "", vehicleDescription: vehicleDescription ?? "", manufacturerName: manufacturerName ?? "", isSelfDrive: selfDrive ?? "", driverName: driverName ?? "", isInsured: isInsured ?? "", noOfSeat: noOfSeats ?? "", fuelType: fuelTyoe ?? "", ownerId: NewVehicleViewController.ownerId, vehicleType: "Motorcycle"))}
+            else if iVehicleSegmentValue.selectedSegmentIndex == 1{
+                  DataStorage.getInstance().addVehicle(vehicle: Vehicle(vehicleIdentificationNumber: vin ?? "", vehicleDescription: vehicleDescription ?? "", manufacturerName: manufacturerName ?? "", isSelfDrive: selfDrive ?? "", driverName: driverName ?? "", isInsured: isInsured ?? "", noOfSeat: noOfSeats ?? "", fuelType: fuelTyoe ?? "", ownerId: NewVehicleViewController.ownerId, vehicleType: "Car"))
+            }
+            else if iVehicleSegmentValue.selectedSegmentIndex == 2{
+                  DataStorage.getInstance().addVehicle(vehicle: Vehicle(vehicleIdentificationNumber: vin ?? "", vehicleDescription: vehicleDescription ?? "", manufacturerName: manufacturerName ?? "", isSelfDrive: selfDrive ?? "", driverName: driverName ?? "", isInsured: isInsured ?? "", noOfSeat: noOfSeats ?? "", fuelType: fuelTyoe ?? "", ownerId: NewVehicleViewController.ownerId, vehicleType: "Bus"))
+            }
             let childUpdates = ["/Vehicles/\(key)": insert]
                        self.ref.updateChildValues(childUpdates)
                        
