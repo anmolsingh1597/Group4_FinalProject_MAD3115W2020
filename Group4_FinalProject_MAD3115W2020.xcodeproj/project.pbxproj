@@ -28,6 +28,7 @@
 		8E87A081242149C100FFEBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E87A080242149C100FFEBC3 /* Assets.xcassets */; };
 		8E87A084242149C100FFEBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E87A082242149C100FFEBC3 /* LaunchScreen.storyboard */; };
 		8E87A08C24214CFF00FFEBC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E87A08B24214CFF00FFEBC3 /* GoogleService-Info.plist */; };
+		8EB9D83B242A312B00BCEECF /* VehicleSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */; };
 		8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		8E87A083242149C100FFEBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E87A085242149C100FFEBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E87A08B24214CFF00FFEBC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSelectionTableViewController.swift; sourceTree = "<group>"; };
 		8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2DB81AA7D79BC4B71B50C9A /* libPods-Group4_FinalProject_MAD3115W2020.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Group4_FinalProject_MAD3115W2020.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				8E10967B2421B58400F4BCE5 /* AddPersonViewController.swift */,
 				8E10967F2423EF5200F4BCE5 /* VehicleListViewController.swift */,
 				8E1096812423F10200F4BCE5 /* NewVehicleViewController.swift */,
+				8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */,
 				8E87A07D242149BF00FFEBC3 /* Main.storyboard */,
 				8E87A080242149C100FFEBC3 /* Assets.xcassets */,
 				8E87A082242149C100FFEBC3 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				8E0A4AE12421969700481DC2 /* Driver.swift in Sources */,
 				8E0A4AE32421982D00481DC2 /* Enum.swift in Sources */,
 				8E10967E2422955D00F4BCE5 /* DataStorage.swift in Sources */,
+				8EB9D83B242A312B00BCEECF /* VehicleSelectionTableViewController.swift in Sources */,
 				8E0A4ADD242193C400481DC2 /* Person.swift in Sources */,
 				8E1096822423F10200F4BCE5 /* NewVehicleViewController.swift in Sources */,
 				8E10968A2423FF0B00F4BCE5 /* Bus.swift in Sources */,
