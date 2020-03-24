@@ -46,7 +46,18 @@ class VehicleSelectionTableViewController: UITableViewController {
       let vehicle = vehicleList[indexPath.row]
         VehicleRentViewController.vin = vehicle.vehicleIdentificationNumber
         VehicleRentViewController.vehicleName = vehicle.manufacturerName + " "+vehicle.vehicleDescription
-        
+        if vehicle.vehicleType == "Motorcycle"{
+            VehicleRentViewController.baseRate = 50.00
+            VehicleRentViewController.ratePerKm = 1.00
+        }
+        else if vehicle.vehicleType == "Car"{
+            VehicleRentViewController.baseRate = 100.00
+            VehicleRentViewController.ratePerKm = 5.00
+        }
+        else if vehicle.vehicleType == "Bus"{
+            VehicleRentViewController.baseRate = 250.00
+            VehicleRentViewController.ratePerKm = 7.00
+        }
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
