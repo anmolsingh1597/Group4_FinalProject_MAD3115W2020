@@ -582,8 +582,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Vehicle Rent" id="T4O-vL-z2Z"/>
                     <connections>
+                        <outlet property="iBaseRate" destination="fEn-Ph-ujd" id="UA4-yr-DqU"/>
                         <outlet property="iFirstName" destination="PMz-tR-j9P" id="h0v-jH-PpK"/>
                         <outlet property="iId" destination="wkm-WE-rNr" id="th7-EM-uST"/>
+                        <outlet property="iRatePerKm" destination="a8U-G7-vDR" id="4gj-H8-Gqd"/>
+                        <outlet property="iVIN" destination="lN6-K9-m5L" id="1cY-Ce-MDO"/>
+                        <outlet property="iVehicle" destination="E4w-qy-Ddp" id="URY-lN-V8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrR-JI-sye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

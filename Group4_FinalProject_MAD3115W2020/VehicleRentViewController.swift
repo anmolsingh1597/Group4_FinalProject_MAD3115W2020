@@ -11,17 +11,26 @@ import UIKit
 class VehicleRentViewController: UIViewController {
     @IBOutlet weak var iId: UILabel!
     @IBOutlet weak var iFirstName: UILabel!
+    @IBOutlet weak var iVIN: UILabel!
+    @IBOutlet weak var iVehicle: UILabel!
+    @IBOutlet weak var iBaseRate: UILabel!
+    @IBOutlet weak var iRatePerKm: UILabel!
     static var id = String()
     static var firstName = String()
+    static var vin = String()
+    static var vehicleName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        iId.text = VehicleRentViewController.id
-        iFirstName.text = VehicleRentViewController.firstName
+       intials()
     }
     
+    func intials(){
+    iId.text = VehicleRentViewController.id
+    iFirstName.text = VehicleRentViewController.firstName
+    }
 
     /*
     // MARK: - Navigation
