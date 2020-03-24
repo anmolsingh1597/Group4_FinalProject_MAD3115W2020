@@ -37,13 +37,15 @@ class VehicleSelectionTableViewController: UITableViewController {
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleSelectionVC")
         let vehicle = vehicleList[indexPath.row]
-        cell?.textLabel?.text = vehicle.manufacturerName + vehicle.vehicleDescription
+        cell?.textLabel?.text = vehicle.manufacturerName + " " + vehicle.vehicleDescription
         cell?.detailTextLabel?.text = vehicle.ownerId
         return cell!
 
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+      let vehicle = vehicleList[indexPath.row]
+        VehicleRentViewController.vin = vehicle.vehicleIdentificationNumber
+        VehicleRentViewController.vehicleName = vehicle.manufacturerName + " "+vehicle.vehicleDescription
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

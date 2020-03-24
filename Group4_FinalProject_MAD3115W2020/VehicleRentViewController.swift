@@ -19,6 +19,8 @@ class VehicleRentViewController: UIViewController {
     static var firstName = String()
     static var vin = String()
     static var vehicleName = String()
+    static var baseRate = Double()
+    static var ratePerKm = Double()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,8 @@ class VehicleRentViewController: UIViewController {
     func intials(){
     iId.text = VehicleRentViewController.id
     iFirstName.text = VehicleRentViewController.firstName
+        iVIN.text = VehicleRentViewController.vin
+        iVehicle.text = VehicleRentViewController.vehicleName
     }
 
     /*
