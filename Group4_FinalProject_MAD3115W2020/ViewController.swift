@@ -103,7 +103,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView == iTableOwners{
+        if tableView == iTableViewCustomer{
+            let person = customerList[indexPath.row]
+            VehicleRentViewController.id = person.id
+            VehicleRentViewController.firstName = person.firstName + person.lastName
+        }
+       else if tableView == iTableOwners{
             let person = ownerList[indexPath.row]
             VehicleListViewController.ownerId = person.id
             VehicleListViewController.firstName = person.firstName
