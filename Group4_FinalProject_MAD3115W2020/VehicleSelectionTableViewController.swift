@@ -46,6 +46,7 @@ class VehicleSelectionTableViewController: UITableViewController {
       let vehicle = vehicleList[indexPath.row]
         VehicleRentViewController.vin = vehicle.vehicleIdentificationNumber
         VehicleRentViewController.vehicleName = vehicle.manufacturerName + " "+vehicle.vehicleDescription
+        
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

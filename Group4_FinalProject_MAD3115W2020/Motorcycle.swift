@@ -12,9 +12,9 @@ class Motorcycle: Vehicle{
     var maxTopSpeed: String
     var milage: String
     
-    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, ownerId: String, maxTopSpeed: String, milage: String) {
+    init(vehicleIdentificationNumber: String, vehicleDescription: String, manufacturerName: String, isSelfDrive: String, driverName: String, isInsured: String, noOfSeat: String, fuelType: String, ownerId: String, vehicleType: String, maxTopSpeed: String, milage: String) {
         self.maxTopSpeed = maxTopSpeed
         self.milage = milage
-        super.init(vehicleIdentificationNumber: vehicleIdentificationNumber, vehicleDescription: vehicleDescription, manufacturerName: manufacturerName, isSelfDrive: isSelfDrive, driverName: driverName, isInsured: isInsured, noOfSeat: noOfSeat, fuelType: fuelType, ownerId: ownerId)
+        super.init(vehicleIdentificationNumber: vehicleIdentificationNumber, vehicleDescription: vehicleDescription, manufacturerName: manufacturerName, isSelfDrive: isSelfDrive, driverName: driverName, isInsured: isInsured, noOfSeat: noOfSeat, fuelType: fuelType, ownerId: ownerId, vehicleType: vehicleType)
     }
 }

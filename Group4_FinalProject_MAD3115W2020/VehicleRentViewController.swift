@@ -30,10 +30,12 @@ class VehicleRentViewController: UIViewController {
     }
     
     func intials(){
-    iId.text = VehicleRentViewController.id
-    iFirstName.text = VehicleRentViewController.firstName
+        iId.text = VehicleRentViewController.id
+        iFirstName.text = VehicleRentViewController.firstName
         iVIN.text = VehicleRentViewController.vin
         iVehicle.text = VehicleRentViewController.vehicleName
+        iBaseRate.text = "Base rate: $ " + String(VehicleRentViewController.baseRate)
+        iRatePerKm.text = "Rate per Km: $ " + String(VehicleRentViewController.ratePerKm)
     }
 
     /*
