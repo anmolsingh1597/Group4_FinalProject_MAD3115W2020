@@ -18,6 +18,8 @@ class VehicleRentViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        iId.text = VehicleRentViewController.id
+        iFirstName.text = VehicleRentViewController.firstName
     }
     
 

@@ -106,7 +106,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         if tableView == iTableViewCustomer{
             let person = customerList[indexPath.row]
             VehicleRentViewController.id = person.id
-            VehicleRentViewController.firstName = person.firstName + person.lastName
+            VehicleRentViewController.firstName = person.firstName + " " + person.lastName
         }
        else if tableView == iTableOwners{
             let person = ownerList[indexPath.row]
