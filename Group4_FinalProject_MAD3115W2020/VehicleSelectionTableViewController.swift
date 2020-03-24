@@ -20,6 +20,7 @@ class VehicleSelectionTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         vehicleList = DataStorage.getInstance().getAllVehicles()
+        print(vehicleList)
     }
 
     // MARK: - Table view data source
@@ -31,16 +32,18 @@ class VehicleSelectionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return vehicleList.count
+        return 1
     }
 
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleSelectionVC")
-        let vehicle = vehicleList[indexPath.row]
-        cell?.textLabel?.text = vehicle.manufacturerName + vehicle.vehicleDescription
-        cell?.detailTextLabel?.text = vehicle.ownerId
-        return cell!
-    
+//        let vehicle = vehicleList[indexPath.row]
+//        cell?.textLabel?.text = vehicle.manufacturerName + vehicle.vehicleDescription
+//        cell?.detailTextLabel?.text = vehicle.ownerId
+    cell?.textLabel?.text = "Hi"
+    cell?.detailTextLabel?.text = "Hi"
+    return cell!
+
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

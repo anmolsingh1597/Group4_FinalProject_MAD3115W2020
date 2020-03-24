@@ -484,7 +484,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="JTx-Yw-1Pk" detailTextLabel="Zmv-aj-8Z6" style="IBUITableViewCellStyleValue1" id="00i-s3-vLk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleSelectionVC" textLabel="JTx-Yw-1Pk" detailTextLabel="Zmv-aj-8Z6" style="IBUITableViewCellStyleValue1" id="00i-s3-vLk">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="00i-s3-vLk" id="0Ko-TG-cil">
@@ -515,6 +515,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Pick a Vehicle" id="xnd-aC-Egt"/>
+                    <connections>
+                        <outlet property="view" destination="nI9-wI-QGf" id="awQ-iI-5va"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6t-Hl-0dO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
