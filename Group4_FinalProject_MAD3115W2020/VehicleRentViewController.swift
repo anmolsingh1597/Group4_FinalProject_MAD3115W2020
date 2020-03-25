@@ -15,12 +15,16 @@ class VehicleRentViewController: UIViewController {
     @IBOutlet weak var iVehicle: UILabel!
     @IBOutlet weak var iBaseRate: UILabel!
     @IBOutlet weak var iRatePerKm: UILabel!
+    @IBOutlet weak var iStartDate: UITextField!
+    @IBOutlet weak var iEndDate: UITextField!
     static var id = String()
     static var firstName = String()
     static var vin = String()
     static var vehicleName = String()
     static var baseRate = Double()
     static var ratePerKm = Double()
+    var noOfDays = Int()
+    var noOfKmDrived = Double()
     
     override func viewDidLoad() {
         super.viewDidLoad()
