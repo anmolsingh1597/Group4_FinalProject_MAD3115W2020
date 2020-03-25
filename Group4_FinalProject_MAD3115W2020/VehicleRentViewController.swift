@@ -17,6 +17,7 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iRatePerKm: UILabel!
     @IBOutlet weak var iStartDate: UITextField!
     @IBOutlet weak var iEndDate: UITextField!
+    @IBOutlet weak var iNoOfDays: UILabel!
     var datePicker: UIDatePicker!
     static var id = String()
     static var firstName = String()
@@ -101,6 +102,7 @@ extension VehicleRentViewController
         else if iEndDate.isEditing{
         iEndDate.text = dateFormatter2.string(from: datePicker.date)
         iEndDate.resignFirstResponder()
+            print(dateFormatter1.date(from: iEndDate.text ?? "") as Any)
             
         }
       }

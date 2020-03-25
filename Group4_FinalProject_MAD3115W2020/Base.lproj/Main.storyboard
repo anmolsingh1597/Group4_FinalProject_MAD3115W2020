@@ -580,7 +580,7 @@
                                 <rect key="frame" x="20" y="291" width="202" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="4rq-Rk-u8D" id="fWa-hM-c7U"/>
@@ -590,12 +590,19 @@
                                 <rect key="frame" x="20" y="320" width="202" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="4rq-Rk-u8D" id="87D-SX-xrJ"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Of Days:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGA-5Y-rGJ">
+                                <rect key="frame" x="20" y="351" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gJY-2R-O8o"/>
@@ -606,6 +613,7 @@
                         <outlet property="iEndDate" destination="5I4-Hz-Txi" id="yMj-2Z-Fkt"/>
                         <outlet property="iFirstName" destination="PMz-tR-j9P" id="h0v-jH-PpK"/>
                         <outlet property="iId" destination="wkm-WE-rNr" id="th7-EM-uST"/>
+                        <outlet property="iNoOfDays" destination="eGA-5Y-rGJ" id="FnT-2r-Hnh"/>
                         <outlet property="iRatePerKm" destination="a8U-G7-vDR" id="4gj-H8-Gqd"/>
                         <outlet property="iStartDate" destination="3uF-sJ-772" id="RKE-EB-0xr"/>
                         <outlet property="iVIN" destination="lN6-K9-m5L" id="1cY-Ce-MDO"/>
