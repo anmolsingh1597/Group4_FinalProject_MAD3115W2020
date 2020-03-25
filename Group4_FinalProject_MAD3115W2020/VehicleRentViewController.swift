@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VehicleRentViewController: UIViewController {
+class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iId: UILabel!
     @IBOutlet weak var iFirstName: UILabel!
     @IBOutlet weak var iVIN: UILabel!
@@ -17,14 +17,14 @@ class VehicleRentViewController: UIViewController {
     @IBOutlet weak var iRatePerKm: UILabel!
     @IBOutlet weak var iStartDate: UITextField!
     @IBOutlet weak var iEndDate: UITextField!
+    var datePicker: UIDatePicker!
     static var id = String()
     static var firstName = String()
     static var vin = String()
     static var vehicleName = String()
     static var baseRate = Double()
     static var ratePerKm = Double()
-    var noOfDays = Int()
-    var noOfKmDrived = Double()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,10 @@ class VehicleRentViewController: UIViewController {
         iRatePerKm.text = "Rate per Km: $ " + String(VehicleRentViewController.ratePerKm)
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUpDate(self.iStartDate)
+        self.pickUpDate(self.iEndDate)
+    }
     /*
     // MARK: - Navigation
 
@@ -52,4 +56,59 @@ class VehicleRentViewController: UIViewController {
     }
     */
 
+}
+
+extension VehicleRentViewController
+{
+ func pickUpDate(_ textField : UITextField){
+          
+          // DatePicker
+          self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+          self.datePicker.backgroundColor = UIColor.white
+          self.datePicker.datePickerMode = UIDatePicker.Mode.date
+          textField.inputView = self.datePicker
+          
+          // ToolBar
+          let toolBar = UIToolbar()
+          toolBar.barStyle = .default
+          toolBar.isTranslucent = true
+          toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+          toolBar.sizeToFit()
+          
+          // Adding Button ToolBar
+          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(VehicleRentViewController.doneClick))
+          let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+          let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(VehicleRentViewController.cancelClick))
+          toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+          toolBar.isUserInteractionEnabled = true
+          textField.inputAccessoryView = toolBar
+          
+      }
+      
+      @objc func doneClick() {
+        print("done")
+          let dateFormatter1 = DateFormatter()
+            let dateFormatter2 = DateFormatter()
+          dateFormatter1.dateStyle = .medium
+          dateFormatter1.timeStyle = .none
+        dateFormatter2.dateStyle = .medium
+        dateFormatter2.timeStyle = .none
+        if iStartDate.isEditing{
+        iStartDate.text = dateFormatter1.string(from: datePicker.date)
+        iStartDate.resignFirstResponder()
+            
+        }
+        else if iEndDate.isEditing{
+        iEndDate.text = dateFormatter2.string(from: datePicker.date)
+        iEndDate.resignFirstResponder()
+            
+        }
+      }
+      
+      @objc func cancelClick() {
+         iStartDate.resignFirstResponder()
+        iEndDate.resignFirstResponder()
+         
+ }
+    
 }
