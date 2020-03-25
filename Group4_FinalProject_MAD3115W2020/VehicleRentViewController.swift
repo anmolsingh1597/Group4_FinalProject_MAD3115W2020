@@ -97,12 +97,14 @@ extension VehicleRentViewController
         if iStartDate.isEditing{
         iStartDate.text = dateFormatter1.string(from: datePicker.date)
         iStartDate.resignFirstResponder()
+            print(datePicker.date)
             
         }
         else if iEndDate.isEditing{
         iEndDate.text = dateFormatter2.string(from: datePicker.date)
         iEndDate.resignFirstResponder()
-            print(dateFormatter1.date(from: iEndDate.text ?? "") as Any)
+            print(datePicker.date)
+//            print(dateFormatter1.date(from: iEndDate.text ?? "") as Any)
             
         }
       }
