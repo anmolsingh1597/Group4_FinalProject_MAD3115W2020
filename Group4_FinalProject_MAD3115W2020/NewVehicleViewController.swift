@@ -164,7 +164,8 @@ extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource
                 iDriverName.text = "None"
                 iDriverName.isUserInteractionEnabled = false
             }else{
-                
+                iDriverName.text = "Driver Name"
+                iDriverName.isUserInteractionEnabled = true
             }
          }else if pickerView == driverNamePicker{
             
