@@ -74,10 +74,10 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func iCalculateFare(_ sender: UIButton) {
         var totalFare: Double
-        var baseRate = VehicleRentViewController.baseRate
-        var rentPerKm = VehicleRentViewController.ratePerKm
-        var totalNoOfDays = self.noOfDays
-        var noOfKm = iNoOfKmDrived.text?.toDouble() ?? 0.0
+        let baseRate = VehicleRentViewController.baseRate
+        let rentPerKm = VehicleRentViewController.ratePerKm
+        let totalNoOfDays = self.noOfDays
+        let noOfKm = iNoOfKmDrived.text?.toDouble() ?? 0.0
         
         totalFare = baseRate * Double(totalNoOfDays) + rentPerKm * noOfKm
         
