@@ -162,8 +162,12 @@ extension NewVehicleViewController: UIPickerViewDelegate, UIPickerViewDataSource
             iSelfDrive.text = selfDrive[row]
             if iSelfDrive.text == "Yes"{
                 iDriverName.text = "None"
+                iDriverName.isUserInteractionEnabled = false
+            }else{
+                
             }
          }else if pickerView == driverNamePicker{
+            
             iDriverName.text = driverName[row]
             
         }
