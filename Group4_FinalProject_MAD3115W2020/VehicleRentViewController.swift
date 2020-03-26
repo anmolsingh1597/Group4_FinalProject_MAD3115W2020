@@ -70,7 +70,8 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
     @IBAction func iCalculateFare(_ sender: UIButton) {
         var totalFare: Double
         let baseRate = VehicleRentViewController.baseRate
