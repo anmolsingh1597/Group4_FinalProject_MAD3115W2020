@@ -475,6 +475,41 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="iqe-dO-2g8">
+            <objects>
+                <viewController storyboardIdentifier="webVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eEx-Nw-hHh" customClass="WebViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ne-nR-0Jk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbC-6d-CcI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nIN-cS-k7E" firstAttribute="bottom" secondItem="gbC-6d-CcI" secondAttribute="bottom" id="34h-R9-nOO"/>
+                            <constraint firstItem="gbC-6d-CcI" firstAttribute="top" secondItem="nIN-cS-k7E" secondAttribute="top" id="8yO-6L-JPb"/>
+                            <constraint firstItem="nIN-cS-k7E" firstAttribute="trailing" secondItem="gbC-6d-CcI" secondAttribute="trailing" id="Uhf-PG-Ffe"/>
+                            <constraint firstItem="gbC-6d-CcI" firstAttribute="leading" secondItem="nIN-cS-k7E" secondAttribute="leading" id="Y0C-s8-lFS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nIN-cS-k7E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nxZ-tD-AF9"/>
+                    <connections>
+                        <outlet property="iWebView" destination="gbC-6d-CcI" id="9ov-uR-h0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAe-ii-dw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="935"/>
+        </scene>
         <!--Pick a Vehicle-->
         <scene sceneID="w8N-UP-tkr">
             <objects>
@@ -892,6 +927,23 @@
                                 <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fny-gg-3Mq">
+                                <rect key="frame" x="336" y="832" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About Us">
+                                    <color key="titleColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eEx-Nw-hHh" kind="show" id="XF8-Mt-YTo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-e3-0CK">
+                                <rect key="frame" x="14" y="832" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Contact Us">
+                                    <color key="titleColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nzH-ov-Uw6"/>
