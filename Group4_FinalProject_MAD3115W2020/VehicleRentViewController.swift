@@ -148,7 +148,6 @@ extension VehicleRentViewController
       @objc func cancelClick() {
          iStartDate.resignFirstResponder()
         iEndDate.resignFirstResponder()
-         
- }
+         }
     
 }
