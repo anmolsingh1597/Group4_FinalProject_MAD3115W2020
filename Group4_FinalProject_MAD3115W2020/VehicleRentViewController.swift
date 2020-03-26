@@ -89,6 +89,10 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
                      self.navigationController?.pushViewController(listsVC, animated: true)
         }))
         self.present(alertControll, animated: true, completion: nil)
+        } else {
+            let errorAlert = UIAlertController(title: "Error!", message: "Invalid Values", preferredStyle: .alert)
+            errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(errorAlert, animated: true, completion: nil)
         }
     }
     
