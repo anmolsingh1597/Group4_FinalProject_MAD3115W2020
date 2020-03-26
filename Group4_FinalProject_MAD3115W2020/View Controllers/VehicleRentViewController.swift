@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iId: UILabel!
@@ -19,17 +20,18 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iEndDate: UITextField!
     @IBOutlet weak var iNoOfDays: UILabel!
     @IBOutlet weak var iNoOfKmDrived: UITextField!
+    var ref = Database.database().reference()
     var datePicker: UIDatePicker!
     var rentStartDate: Date = Date()
-     var rentEndDate: Date = Date()
-     var noOfDays: Int = 0
+    var rentEndDate: Date = Date()
+    var noOfDays: Int = 0
     static var id = String()
     static var firstName = String()
     static var vin = String()
     static var vehicleName = String()
     static var baseRate = Double()
     static var ratePerKm = Double()
-  
+    var insert: [String: String] = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +80,11 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
         let rentPerKm = VehicleRentViewController.ratePerKm
         let totalNoOfDays = self.noOfDays
         let noOfKm = iNoOfKmDrived.text?.toDouble() ?? 0.0
-        
+        let id = VehicleRentViewController.id
+        let firstName = VehicleRentViewController.firstName
+        let vin = VehicleRentViewController.vin
+        let vehicle = VehicleRentViewController.vehicleName
+        guard let key = self.ref.child("VehicleRent").childByAutoId().key else {return}
         totalFare = baseRate * Double(totalNoOfDays) + rentPerKm * noOfKm
         
         if totalFare >= 0 && totalNoOfDays >= 0 {
@@ -88,6 +94,10 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
                let sb = UIStoryboard(name: "Main", bundle: nil)
                      let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
                      self.navigationController?.pushViewController(listsVC, animated: true)
+//            _____________________--------------------
+            self.insert = ["id": id, "firstName": firstName, "vin": vin, "vehicle": vehicle, "rentedNoOfDays": String(totalNoOfDays), "noOfKmDrived": String(noOfKm), "totalFare": String(totalFare)]
+            let childUpdates = ["/VehicleRent/\(key)": self.insert]
+            self.ref.updateChildValues(childUpdates)
         }))
         self.present(alertControll, animated: true, completion: nil)
         } else {
