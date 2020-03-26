@@ -7,17 +7,51 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var iLoginId: UITextField!
     @IBOutlet weak var iPassword: UITextField!
-    @IBOutlet weak var iRemeberMe: UISwitch!
+    @IBOutlet weak var iRememberMe: UISwitch!
+    var ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-self.navigationItem.setHidesBackButton(true, animated: true);    }
+self.navigationItem.setHidesBackButton(true, animated: true);
+        intials()
+        
+    }
+    func intials(){
+        iRememberMe.addTarget(self, action: #selector(self.stateChanged), for: .valueChanged)
+                       let defaults: UserDefaults? = UserDefaults.standard
+
+               // check if defaults already saved the details
+                   if (defaults?.bool(forKey: "ISRemember"))! {
+                       iLoginId.text = defaults?.value(forKey: "SavedUserName") as? String
+                       iPassword.text = defaults?.value(forKey: "SavedPassword") as? String
+                           iRememberMe.setOn(true, animated: false)
+                       }
+                       else {
+                           iRememberMe.setOn(false, animated: false)
+                       }
+    }
+    
+        @objc func stateChanged(_ switchState: UISwitch) {
+
+        let defaults: UserDefaults? = UserDefaults.standard
+            if switchState.isOn {
+            defaults?.set(true, forKey: "ISRemember")
+            defaults?.set(iLoginId.text, forKey: "SavedUserName")
+            defaults?.set(iPassword.text, forKey: "SavedPassword")
+        }
+        else {
+            defaults?.set(false, forKey: "ISRemember")
+            }
+            }
+    }
+
     
 
     /*
