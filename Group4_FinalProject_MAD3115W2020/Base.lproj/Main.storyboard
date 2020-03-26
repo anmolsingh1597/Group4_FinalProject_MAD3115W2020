@@ -900,7 +900,7 @@
                     <connections>
                         <outlet property="iLoginId" destination="HtE-hN-8TQ" id="iVx-Jo-Fc0"/>
                         <outlet property="iPassword" destination="MEp-61-fkA" id="NY3-M4-Vfr"/>
-                        <outlet property="iRemeberMe" destination="CGK-yP-meA" id="k6v-NU-ZST"/>
+                        <outlet property="iRememberMe" destination="CGK-yP-meA" id="eLp-Y2-HWA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdW-OM-VuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

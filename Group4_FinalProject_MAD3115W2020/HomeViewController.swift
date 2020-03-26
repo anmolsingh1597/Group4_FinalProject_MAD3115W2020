@@ -50,7 +50,7 @@ self.navigationItem.setHidesBackButton(true, animated: true);
             defaults?.set(false, forKey: "ISRemember")
             }
             }
-    }
+    
 
     
 
