@@ -848,7 +848,7 @@
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="137.94642857142856"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="ujd-4m-wxd">
             <objects>
                 <viewController storyboardIdentifier="homeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ltt-Mg-a8c" customClass="HomeViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -896,16 +896,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nzH-ov-Uw6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nT4-iy-ARs">
+                    <navigationItem key="navigationItem" title="Home" id="nT4-iy-ARs">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wg8-sy-AWR">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zhj-x6-N2F">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="iLogin:" destination="Ltt-Mg-a8c" eventType="touchUpInside" id="duU-Um-6ut"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="iLogin:" destination="Ltt-Mg-a8c" id="GHY-Ew-UJG"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
