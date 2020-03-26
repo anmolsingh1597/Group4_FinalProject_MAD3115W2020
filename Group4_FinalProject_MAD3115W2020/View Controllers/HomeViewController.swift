@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MessageUI
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var iLoginId: UITextField!
@@ -81,6 +82,21 @@ self.navigationItem.setHidesBackButton(true, animated: true);
             }
     
     
+    @IBAction func iContactUs(_ sender: UIButton) {
+        if let url = URL(string: "tel://+9988421530)"), UIApplication.shared.canOpenURL(url)
+        {
+            if #available(iOS 10, *)
+            {
+                UIApplication.shared.open(url)
+            }
+            else
+            {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
+
 }
     
 
