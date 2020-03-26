@@ -896,7 +896,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nzH-ov-Uw6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nT4-iy-ARs"/>
+                    <navigationItem key="navigationItem" id="nT4-iy-ARs">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="wg8-sy-AWR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zhj-x6-N2F">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <connections>
+                                <action selector="iLogin:" destination="Ltt-Mg-a8c" id="GHY-Ew-UJG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="iLoginId" destination="HtE-hN-8TQ" id="iVx-Jo-Fc0"/>
                         <outlet property="iPassword" destination="MEp-61-fkA" id="NY3-M4-Vfr"/>
