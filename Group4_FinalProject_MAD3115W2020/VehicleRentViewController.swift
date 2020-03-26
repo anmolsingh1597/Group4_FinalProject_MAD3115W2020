@@ -18,6 +18,8 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iStartDate: UITextField!
     @IBOutlet weak var iEndDate: UITextField!
     @IBOutlet weak var iNoOfDays: UILabel!
+    @IBOutlet weak var iNoOfKmDrived: UITextField!
+    @IBOutlet weak var iTotalFare: UILabel!
     var datePicker: UIDatePicker!
     var rentStartDate: Date = Date()
      var rentEndDate: Date = Date()
@@ -44,11 +46,21 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
         iVehicle.text = "Vehicle: " + VehicleRentViewController.vehicleName
         iBaseRate.text = "Base rate: $ " + String(VehicleRentViewController.baseRate)
         iRatePerKm.text = "Rate per Km: $ " + String(VehicleRentViewController.ratePerKm)
+        iNoOfKmDrived.delegate = self
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.pickUpDate(self.iStartDate)
         self.pickUpDate(self.iEndDate)
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //For numers
+        if textField == iNoOfKmDrived {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789.")//Here change this characters based on your requirement
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
     }
     /*
     // MARK: - Navigation
@@ -60,6 +72,18 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+    @IBAction func iCalculateFare(_ sender: UIButton) {
+        var totalFare: Double
+        var baseRate = VehicleRentViewController.baseRate
+        var rentPerKm = VehicleRentViewController.ratePerKm
+        var totalNoOfDays = self.noOfDays
+        var noOfKm = iNoOfKmDrived.text?.toDouble() ?? 0.0
+        
+        totalFare = baseRate * Double(totalNoOfDays) + rentPerKm * noOfKm
+        
+        iTotalFare.text = "Total Fare: $" + String(totalFare)
+    }
+    
 }
 
 extension VehicleRentViewController

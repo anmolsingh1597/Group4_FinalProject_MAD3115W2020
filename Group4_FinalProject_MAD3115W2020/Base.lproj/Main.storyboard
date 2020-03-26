@@ -608,11 +608,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                                 <connections>
                                     <outlet property="delegate" destination="4rq-Rk-u8D" id="bx5-uZ-Bda"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Fare:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGq-5G-Rkp">
+                                <rect key="frame" x="20" y="411" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CP-12-s5p">
+                                <rect key="frame" x="156" y="547" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.41304331770000002" blue="0.52675994250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Calculate Fare:">
+                                    <color key="titleColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="iCalculateFare:" destination="4rq-Rk-u8D" eventType="touchUpInside" id="d1n-ka-eBs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gJY-2R-O8o"/>
@@ -624,8 +642,10 @@
                         <outlet property="iFirstName" destination="PMz-tR-j9P" id="h0v-jH-PpK"/>
                         <outlet property="iId" destination="wkm-WE-rNr" id="th7-EM-uST"/>
                         <outlet property="iNoOfDays" destination="eGA-5Y-rGJ" id="FnT-2r-Hnh"/>
+                        <outlet property="iNoOfKmDrived" destination="vD6-Jh-LwE" id="Mzr-Iv-Cfm"/>
                         <outlet property="iRatePerKm" destination="a8U-G7-vDR" id="4gj-H8-Gqd"/>
                         <outlet property="iStartDate" destination="3uF-sJ-772" id="RKE-EB-0xr"/>
+                        <outlet property="iTotalFare" destination="dGq-5G-Rkp" id="hI7-dZ-bX8"/>
                         <outlet property="iVIN" destination="lN6-K9-m5L" id="1cY-Ce-MDO"/>
                         <outlet property="iVehicle" destination="E4w-qy-Ddp" id="URY-lN-V8Q"/>
                     </connections>

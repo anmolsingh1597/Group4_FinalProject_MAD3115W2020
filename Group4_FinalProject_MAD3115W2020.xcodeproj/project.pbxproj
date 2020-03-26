@@ -31,6 +31,7 @@
 		8EB9D83B242A312B00BCEECF /* VehicleSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */; };
 		8EB9D83D242A372000BCEECF /* VehicleRentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D83C242A372000BCEECF /* VehicleRentViewController.swift */; };
 		8EC43BE2242C267100BD74FF /* Integer+Entension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC43BE1242C267100BD74FF /* Integer+Entension.swift */; };
+		8EC43BE4242C2D9100BD74FF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC43BE3242C2D9100BD74FF /* String+Extension.swift */; };
 		8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSelectionTableViewController.swift; sourceTree = "<group>"; };
 		8EB9D83C242A372000BCEECF /* VehicleRentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRentViewController.swift; sourceTree = "<group>"; };
 		8EC43BE1242C267100BD74FF /* Integer+Entension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Entension.swift"; sourceTree = "<group>"; };
+		8EC43BE3242C2D9100BD74FF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2DB81AA7D79BC4B71B50C9A /* libPods-Group4_FinalProject_MAD3115W2020.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Group4_FinalProject_MAD3115W2020.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 				8E87A085242149C100FFEBC3 /* Info.plist */,
 				8E87A08B24214CFF00FFEBC3 /* GoogleService-Info.plist */,
 				8EC43BE1242C267100BD74FF /* Integer+Entension.swift */,
+				8EC43BE3242C2D9100BD74FF /* String+Extension.swift */,
 			);
 			path = Group4_FinalProject_MAD3115W2020;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E1096842423FB0E00F4BCE5 /* Vehicle.swift in Sources */,
+				8EC43BE4242C2D9100BD74FF /* String+Extension.swift in Sources */,
 				8E87A07C242149BF00FFEBC3 /* ViewController.swift in Sources */,
 				8E1096882423FD9E00F4BCE5 /* Car.swift in Sources */,
 				8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */,
