@@ -118,8 +118,24 @@
 		8E87A076242149BF00FFEBC3 /* Group4_FinalProject_MAD3115W2020 */ = {
 			isa = PBXGroup;
 			children = (
-				8E87A077242149BF00FFEBC3 /* AppDelegate.swift */,
-				8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */,
+				8ECB183E242D66A500069F2A /* Storyboards */,
+				8ECB183D242D668B00069F2A /* Delegates */,
+				8ECB183C242D662300069F2A /* Enum */,
+				8ECB183B242D661200069F2A /* DataFile */,
+				8ECB183A242D65FE00069F2A /* Extensions */,
+				8ECB1839242D65D500069F2A /* Vehicle */,
+				8ECB1838242D65BA00069F2A /* Person */,
+				8ECB1837242D659100069F2A /* View Controllers */,
+				8E87A080242149C100FFEBC3 /* Assets.xcassets */,
+				8E87A085242149C100FFEBC3 /* Info.plist */,
+				8E87A08B24214CFF00FFEBC3 /* GoogleService-Info.plist */,
+			);
+			path = Group4_FinalProject_MAD3115W2020;
+			sourceTree = "<group>";
+		};
+		8ECB1837242D659100069F2A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */,
 				8E87A07B242149BF00FFEBC3 /* ViewController.swift */,
 				8E10967B2421B58400F4BCE5 /* AddPersonViewController.swift */,
@@ -127,25 +143,73 @@
 				8E1096812423F10200F4BCE5 /* NewVehicleViewController.swift */,
 				8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */,
 				8EB9D83C242A372000BCEECF /* VehicleRentViewController.swift */,
-				8E87A07D242149BF00FFEBC3 /* Main.storyboard */,
-				8E87A080242149C100FFEBC3 /* Assets.xcassets */,
-				8E87A082242149C100FFEBC3 /* LaunchScreen.storyboard */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8ECB1838242D65BA00069F2A /* Person */ = {
+			isa = PBXGroup;
+			children = (
 				8E0A4ADC242193C400481DC2 /* Person.swift */,
 				8E0A4ADE2421957F00481DC2 /* Customer.swift */,
 				8E0A4AE02421969700481DC2 /* Driver.swift */,
 				8E0A4AE42421999800481DC2 /* Owner.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		8ECB1839242D65D500069F2A /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
 				8E1096832423FB0E00F4BCE5 /* Vehicle.swift */,
 				8E1096852423FC7D00F4BCE5 /* Motorcycle.swift */,
 				8E1096872423FD9E00F4BCE5 /* Car.swift */,
 				8E1096892423FF0B00F4BCE5 /* Bus.swift */,
-				8E0A4AE22421982D00481DC2 /* Enum.swift */,
-				8E10967D2422955D00F4BCE5 /* DataStorage.swift */,
-				8E87A085242149C100FFEBC3 /* Info.plist */,
-				8E87A08B24214CFF00FFEBC3 /* GoogleService-Info.plist */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		8ECB183A242D65FE00069F2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				8EC43BE1242C267100BD74FF /* Integer+Entension.swift */,
 				8EC43BE3242C2D9100BD74FF /* String+Extension.swift */,
 			);
-			path = Group4_FinalProject_MAD3115W2020;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8ECB183B242D661200069F2A /* DataFile */ = {
+			isa = PBXGroup;
+			children = (
+				8E10967D2422955D00F4BCE5 /* DataStorage.swift */,
+			);
+			path = DataFile;
+			sourceTree = "<group>";
+		};
+		8ECB183C242D662300069F2A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				8E0A4AE22421982D00481DC2 /* Enum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		8ECB183D242D668B00069F2A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8E87A077242149BF00FFEBC3 /* AppDelegate.swift */,
+				8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8ECB183E242D66A500069F2A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8E87A07D242149BF00FFEBC3 /* Main.storyboard */,
+				8E87A082242149C100FFEBC3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
