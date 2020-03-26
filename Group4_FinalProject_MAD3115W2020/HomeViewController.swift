@@ -9,7 +9,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var iLoginId: UITextField!
+    @IBOutlet weak var iPassword: UITextField!
+    @IBOutlet weak var iRemeberMe: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
