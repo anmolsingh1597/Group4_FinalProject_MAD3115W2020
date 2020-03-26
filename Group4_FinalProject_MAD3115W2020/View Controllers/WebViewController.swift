@@ -16,8 +16,14 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        lambtonURL()
     }
     
+    func lambtonURL(){
+         let url = URL(string: "https://www.lambtoncollege.ca/Presidents_Welcome/")
+         let urlRequest = URLRequest(url: url!)
+         iWebView.load(urlRequest)
+     }
 
     /*
     // MARK: - Navigation
