@@ -80,7 +80,7 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
         
         totalFare = baseRate * Double(totalNoOfDays) + rentPerKm * noOfKm
         
-        if totalFare >= 0{
+        if totalFare >= 0 && totalNoOfDays >= 0 {
         
             let alertControll = UIAlertController(title: "Success", message: "Your total fare is $\(totalFare)", preferredStyle: .alert)
         alertControll.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
@@ -91,7 +91,7 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
         self.present(alertControll, animated: true, completion: nil)
         } else {
             let errorAlert = UIAlertController(title: "Error!", message: "Invalid Values", preferredStyle: .alert)
-            errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            errorAlert.addAction(UIAlertAction(title: "OK", style: .destructive))
             self.present(errorAlert, animated: true, completion: nil)
         }
     }
