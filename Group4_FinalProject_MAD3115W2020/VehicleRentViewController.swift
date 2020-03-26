@@ -19,7 +19,6 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iEndDate: UITextField!
     @IBOutlet weak var iNoOfDays: UILabel!
     @IBOutlet weak var iNoOfKmDrived: UITextField!
-    @IBOutlet weak var iTotalFare: UILabel!
     var datePicker: UIDatePicker!
     var rentStartDate: Date = Date()
      var rentEndDate: Date = Date()
@@ -81,7 +80,13 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
         
         totalFare = baseRate * Double(totalNoOfDays) + rentPerKm * noOfKm
         
-        iTotalFare.text = "Total Fare: $" + String(totalFare)
+            let alertControll = UIAlertController(title: "Success", message: "Your total fare is $\(totalFare)", preferredStyle: .alert)
+        alertControll.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
+               let sb = UIStoryboard(name: "Main", bundle: nil)
+                     let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
+                     self.navigationController?.pushViewController(listsVC, animated: true)
+        }))
+        self.present(alertControll, animated: true, completion: nil)
     }
     
 }
