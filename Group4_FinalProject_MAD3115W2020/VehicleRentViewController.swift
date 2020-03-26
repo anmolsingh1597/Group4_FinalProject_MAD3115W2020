@@ -19,6 +19,9 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var iEndDate: UITextField!
     @IBOutlet weak var iNoOfDays: UILabel!
     var datePicker: UIDatePicker!
+    var rentStartDate: Date = Date()
+     var rentEndDate: Date = Date()
+     var noOfDays: Int = 0
     static var id = String()
     static var firstName = String()
     static var vin = String()
@@ -87,7 +90,6 @@ extension VehicleRentViewController
       }
       
       @objc func doneClick() {
-        print("done")
           let dateFormatter1 = DateFormatter()
             let dateFormatter2 = DateFormatter()
           dateFormatter1.dateStyle = .medium
@@ -97,15 +99,20 @@ extension VehicleRentViewController
         if iStartDate.isEditing{
         iStartDate.text = dateFormatter1.string(from: datePicker.date)
         iStartDate.resignFirstResponder()
-            print(datePicker.date)
+            self.rentStartDate = datePicker.date
             
         }
         else if iEndDate.isEditing{
         iEndDate.text = dateFormatter2.string(from: datePicker.date)
         iEndDate.resignFirstResponder()
-            print(datePicker.date)
-//            print(dateFormatter1.date(from: iEndDate.text ?? "") as Any)
-            
+            self.rentEndDate = datePicker.date
+            self.noOfDays = self.noOfDays.daysBetween(start: self.rentStartDate, end: self.rentEndDate)
+            if self.noOfDays >= 0{
+                iNoOfDays.text = "No of Days: " + String(self.noOfDays)
+                
+            }else{
+                iNoOfDays.text = "No of Days: Invalid Days"
+            }
         }
       }
       
