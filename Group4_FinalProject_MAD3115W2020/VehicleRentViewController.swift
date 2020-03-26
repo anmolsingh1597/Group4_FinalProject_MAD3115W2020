@@ -95,7 +95,6 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
             self.present(errorAlert, animated: true, completion: nil)
         }
     }
-    
 }
 
 extension VehicleRentViewController
