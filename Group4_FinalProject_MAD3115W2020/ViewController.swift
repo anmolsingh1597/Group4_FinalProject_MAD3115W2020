@@ -53,7 +53,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func iHome(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        let alertControll = UIAlertController(title: "Logout!", message: "Are you really wanted to Logout", preferredStyle: .alert)
+           alertControll.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: {(action) in
+                self.navigationController?.popToRootViewController(animated: true)
+           }))
+           self.present(alertControll, animated: true, completion: nil)
+   
     }
     
     
