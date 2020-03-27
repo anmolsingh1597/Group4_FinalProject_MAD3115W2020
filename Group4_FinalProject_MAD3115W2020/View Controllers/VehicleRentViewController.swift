@@ -94,10 +94,12 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
                let sb = UIStoryboard(name: "Main", bundle: nil)
                      let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
                      self.navigationController?.pushViewController(listsVC, animated: true)
-//            _____________________--------------------
+//            ----------------------------------------
             self.insert = ["id": id, "firstName": firstName, "vin": vin, "vehicle": vehicle, "rentedNoOfDays": String(totalNoOfDays), "noOfKmDrived": String(noOfKm), "totalFare": String(totalFare)]
             let childUpdates = ["/VehicleRent/\(key)": self.insert]
             self.ref.updateChildValues(childUpdates)
+            //            ----------------------------------------
+            DataStorage.getInstance().addVehicleRent(vehicleRent: VehicleRent(custId: id, name: firstName, vin: vin, vehicle: vehicle, noOfDays: String(totalNoOfDays), noOfKmDrived: String(noOfKm), totalFare: String(totalFare)))
         }))
         self.present(alertControll, animated: true, completion: nil)
         } else {
