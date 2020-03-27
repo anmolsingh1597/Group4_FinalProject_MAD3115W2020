@@ -89,19 +89,19 @@ extension ListsViewController: UITableViewDelegate, UITableViewDataSource{
             let customerCell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
             let person = customerList[indexPath.row]
             customerCell?.textLabel?.text = person.firstName
-            customerCell?.detailTextLabel?.text = person.id
+            customerCell?.detailTextLabel?.text = person.lastName
             return customerCell!
         } else if tableView == iTableDrivers{
         let driverCell = tableView.dequeueReusableCell(withIdentifier: "driverCell")
             let person = driverList[indexPath.row]
             driverCell?.textLabel?.text = person.firstName
-            driverCell?.detailTextLabel?.text = person.id
+            driverCell?.detailTextLabel?.text = person.lastName
             return driverCell!}
         else if tableView == iTableOwners{
             let ownerCell = tableView.dequeueReusableCell(withIdentifier: "ownerCell")
             let person = ownerList[indexPath.row]
             ownerCell?.textLabel?.text = person.firstName
-            ownerCell?.detailTextLabel?.text = person.id
+            ownerCell?.detailTextLabel?.text = person.lastName
                 return ownerCell!
         }
         return UITableViewCell()
