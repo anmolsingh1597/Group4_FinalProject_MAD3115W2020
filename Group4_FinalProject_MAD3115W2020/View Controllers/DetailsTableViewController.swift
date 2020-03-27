@@ -66,6 +66,21 @@ class DetailsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          if DetailsTableViewController.segmentValue == 0{
+                let person = customerList[indexPath.row]
+            SpecificDetailsViewController.segmentValue = 0
+            SpecificDetailsViewController.personId = person.id
+              }else if DetailsTableViewController.segmentValue == 1{
+                  let person = driverList[indexPath.row]
+            SpecificDetailsViewController.segmentValue = 1
+            SpecificDetailsViewController.personId = person.id
+              }else if DetailsTableViewController.segmentValue == 2{
+                  let person = ownerList[indexPath.row]
+            SpecificDetailsViewController.segmentValue = 2
+            SpecificDetailsViewController.personId = person.id
+              }
+    }
 
     /*
     // Override to support conditional editing of the table view.
