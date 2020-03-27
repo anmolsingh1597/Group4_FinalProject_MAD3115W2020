@@ -37,14 +37,17 @@ class ListsViewController: UIViewController {
             iView1.isHidden = false
             iView2.isHidden = true
             iView3.isHidden = true
+            DetailsTableViewController.segmentValue = 0
         case 1:
             iView2.isHidden = false
             iView1.isHidden = true
             iView3.isHidden = true
+            DetailsTableViewController.segmentValue = 1
         case 2:
             iView1.isHidden = true
             iView2.isHidden = true
             iView3.isHidden = false
+            DetailsTableViewController.segmentValue = 2
         default:
             iView1.isHidden = true
             iView2.isHidden = true
