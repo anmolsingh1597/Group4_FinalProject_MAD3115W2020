@@ -9,6 +9,8 @@
 import UIKit
 
 class LogsTableViewController: UITableViewController {
+    var vehicleRentedList: [VehicleRent] = []
+    var filteredList: [VehicleRent] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,29 +20,41 @@ class LogsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       vehicleRentedList = DataStorage.getInstance().getAllVehiclesRentList()
+        filteredList = vehicleRentedList.filter{$0.custId == VehicleRentViewController.id}
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return filteredList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleRentCell", for: indexPath) as! VehicleRentTableViewCell
+        let vehicleRent = filteredList[indexPath.row]
+        cell.iCustomerId.text = "Customer ID: " + vehicleRent.custId
+        cell.iName.text = "Customer Name: " + vehicleRent.name
+        cell.iVIN.text = "VIN: " + vehicleRent.vin
+        cell.iVehicle.text = "Vehicle: " + vehicleRent.vehicle
+        cell.iNoOfDays.text = "Rented Days: " + vehicleRent.noOfDays + " Days"
+        cell.iNoOfKm.text = "Km Drived: " + vehicleRent.noOfKmDrived + " Km"
+        cell.iTotalFare.text = "Total Fare: $" + vehicleRent.totalFare
 
         return cell
     }
-    */
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      return CGFloat(220.0)
+    }
+     
 
     /*
     // Override to support conditional editing of the table view.
