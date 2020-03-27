@@ -552,7 +552,18 @@
                             <outlet property="delegate" destination="EV5-gy-qVk" id="sxU-Ba-4gZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pick a Vehicle" id="xnd-aC-Egt"/>
+                    <navigationItem key="navigationItem" title="Pick a Vehicle" id="xnd-aC-Egt">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="tZU-Kj-LcQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gyh-He-haM">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logs"/>
+                                <connections>
+                                    <segue destination="pUU-dM-YwF" kind="show" id="Kz0-Yg-UFG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="view" destination="nI9-wI-QGf" id="awQ-iI-5va"/>
                     </connections>
@@ -560,6 +571,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6t-Hl-0dO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1958" y="935"/>
+        </scene>
+        <!--Logs-->
+        <scene sceneID="naQ-ib-sV5">
+            <objects>
+                <tableViewController id="pUU-dM-YwF" customClass="LogsTableViewController" customModule="Group4_FinalProject_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wz7-oh-CPK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cC5-tY-DjZ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cC5-tY-DjZ" id="QWg-De-6QP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pUU-dM-YwF" id="hlX-zU-ygk"/>
+                            <outlet property="delegate" destination="pUU-dM-YwF" id="nHb-wS-AyO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Logs" id="VtA-IF-Dgr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHd-83-qVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="1628"/>
         </scene>
         <!--Vehicle Rent-->
         <scene sceneID="qgx-5K-HXj">
@@ -914,7 +954,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.088881986590000003" green="0.21694519349999999" blue="0.26583433969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGK-yP-meA">
                                 <rect key="frame" x="345" y="329" width="49" height="31"/>

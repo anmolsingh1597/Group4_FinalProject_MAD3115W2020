@@ -34,6 +34,7 @@
 		8EC43BE4242C2D9100BD74FF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC43BE3242C2D9100BD74FF /* String+Extension.swift */; };
 		8ECB1840242D695E00069F2A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB183F242D695E00069F2A /* WebViewController.swift */; };
 		8ECB1845242D6E1900069F2A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECB1844242D6E1900069F2A /* WebKit.framework */; };
+		8ECB1847242D7B5A00069F2A /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB1846242D7B5A00069F2A /* LogsTableViewController.swift */; };
 		8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		8EC43BE3242C2D9100BD74FF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8ECB183F242D695E00069F2A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8ECB1844242D6E1900069F2A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8ECB1846242D7B5A00069F2A /* LogsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsTableViewController.swift; sourceTree = "<group>"; };
 		8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2DB81AA7D79BC4B71B50C9A /* libPods-Group4_FinalProject_MAD3115W2020.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Group4_FinalProject_MAD3115W2020.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				8EB9D83A242A312B00BCEECF /* VehicleSelectionTableViewController.swift */,
 				8EB9D83C242A372000BCEECF /* VehicleRentViewController.swift */,
 				8ECB183F242D695E00069F2A /* WebViewController.swift */,
+				8ECB1846242D7B5A00069F2A /* LogsTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				8E1096882423FD9E00F4BCE5 /* Car.swift in Sources */,
 				8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */,
 				8E0A4AE52421999800481DC2 /* Owner.swift in Sources */,
+				8ECB1847242D7B5A00069F2A /* LogsTableViewController.swift in Sources */,
 				8E10967C2421B58400F4BCE5 /* AddPersonViewController.swift in Sources */,
 				8E0A4ADF2421957F00481DC2 /* Customer.swift in Sources */,
 				8E1096802423EF5200F4BCE5 /* VehicleListViewController.swift in Sources */,
