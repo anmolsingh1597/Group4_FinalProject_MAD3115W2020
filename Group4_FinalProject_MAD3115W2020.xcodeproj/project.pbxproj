@@ -36,6 +36,7 @@
 		8ECB1845242D6E1900069F2A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECB1844242D6E1900069F2A /* WebKit.framework */; };
 		8ECB1847242D7B5A00069F2A /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB1846242D7B5A00069F2A /* LogsTableViewController.swift */; };
 		8ECB184A242D82D200069F2A /* VehicleRentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB1849242D82D200069F2A /* VehicleRentTableViewCell.swift */; };
+		8ECB184D242D866F00069F2A /* VehicleRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB184C242D866F00069F2A /* VehicleRent.swift */; };
 		8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		8ECB1844242D6E1900069F2A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8ECB1846242D7B5A00069F2A /* LogsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsTableViewController.swift; sourceTree = "<group>"; };
 		8ECB1849242D82D200069F2A /* VehicleRentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRentTableViewCell.swift; sourceTree = "<group>"; };
+		8ECB184C242D866F00069F2A /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
 		8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2DB81AA7D79BC4B71B50C9A /* libPods-Group4_FinalProject_MAD3115W2020.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Group4_FinalProject_MAD3115W2020.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		8E87A076242149BF00FFEBC3 /* Group4_FinalProject_MAD3115W2020 */ = {
 			isa = PBXGroup;
 			children = (
+				8ECB184B242D865200069F2A /* Vehicle_Rent */,
 				8ECB1848242D82A100069F2A /* Custom_Cells */,
 				8ECB183E242D66A500069F2A /* Storyboards */,
 				8ECB183D242D668B00069F2A /* Delegates */,
@@ -231,6 +234,14 @@
 				8ECB1849242D82D200069F2A /* VehicleRentTableViewCell.swift */,
 			);
 			path = Custom_Cells;
+			sourceTree = "<group>";
+		};
+		8ECB184B242D865200069F2A /* Vehicle_Rent */ = {
+			isa = PBXGroup;
+			children = (
+				8ECB184C242D866F00069F2A /* VehicleRent.swift */,
+			);
+			path = Vehicle_Rent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +384,7 @@
 				8ECB184A242D82D200069F2A /* VehicleRentTableViewCell.swift in Sources */,
 				8E10968A2423FF0B00F4BCE5 /* Bus.swift in Sources */,
 				8E87A07A242149BF00FFEBC3 /* SceneDelegate.swift in Sources */,
+				8ECB184D242D866F00069F2A /* VehicleRent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
