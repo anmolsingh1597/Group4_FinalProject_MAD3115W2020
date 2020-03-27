@@ -53,7 +53,7 @@ self.navigationItem.setHidesBackButton(true, animated: true);
                         if userDict.values.contains(loginData as! [String : String]){
                             //print("It worked")
                             let sb = UIStoryboard(name: "Main", bundle: nil)
-                            let secondVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
+                            let secondVC = sb.instantiateViewController(identifier: "listsVC") as! ListsViewController
                             self.navigationController?.pushViewController(secondVC, animated: true)
                         }
                         else{

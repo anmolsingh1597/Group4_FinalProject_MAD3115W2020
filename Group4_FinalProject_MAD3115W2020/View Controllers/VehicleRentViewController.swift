@@ -92,7 +92,7 @@ class VehicleRentViewController: UIViewController, UITextFieldDelegate {
             let alertControll = UIAlertController(title: "Success", message: "Your total fare is $\(totalFare)", preferredStyle: .alert)
         alertControll.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
                let sb = UIStoryboard(name: "Main", bundle: nil)
-                     let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ViewController
+                     let listsVC = sb.instantiateViewController(identifier: "listsVC") as! ListsViewController
                      self.navigationController?.pushViewController(listsVC, animated: true)
 //            ----------------------------------------
             self.insert = ["id": id, "firstName": firstName, "vin": vin, "vehicle": vehicle, "rentedNoOfDays": String(totalNoOfDays), "noOfKmDrived": String(noOfKm), "totalFare": String(totalFare)]

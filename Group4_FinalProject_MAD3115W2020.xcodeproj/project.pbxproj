@@ -23,7 +23,7 @@
 		8E10968A2423FF0B00F4BCE5 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1096892423FF0B00F4BCE5 /* Bus.swift */; };
 		8E87A078242149BF00FFEBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A077242149BF00FFEBC3 /* AppDelegate.swift */; };
 		8E87A07A242149BF00FFEBC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */; };
-		8E87A07C242149BF00FFEBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A07B242149BF00FFEBC3 /* ViewController.swift */; };
+		8E87A07C242149BF00FFEBC3 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87A07B242149BF00FFEBC3 /* ListsViewController.swift */; };
 		8E87A07F242149BF00FFEBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E87A07D242149BF00FFEBC3 /* Main.storyboard */; };
 		8E87A081242149C100FFEBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E87A080242149C100FFEBC3 /* Assets.xcassets */; };
 		8E87A084242149C100FFEBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E87A082242149C100FFEBC3 /* LaunchScreen.storyboard */; };
@@ -59,7 +59,7 @@
 		8E87A074242149BF00FFEBC3 /* Group4_FinalProject_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group4_FinalProject_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E87A077242149BF00FFEBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E87A079242149BF00FFEBC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E87A07B242149BF00FFEBC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E87A07B242149BF00FFEBC3 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		8E87A07E242149BF00FFEBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E87A080242149C100FFEBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E87A083242149C100FFEBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8EF12F7D24244CEB00B89E90 /* HomeViewController.swift */,
-				8E87A07B242149BF00FFEBC3 /* ViewController.swift */,
+				8E87A07B242149BF00FFEBC3 /* ListsViewController.swift */,
 				8E10967B2421B58400F4BCE5 /* AddPersonViewController.swift */,
 				8E10967F2423EF5200F4BCE5 /* VehicleListViewController.swift */,
 				8E1096812423F10200F4BCE5 /* NewVehicleViewController.swift */,
@@ -363,7 +363,7 @@
 				8E1096842423FB0E00F4BCE5 /* Vehicle.swift in Sources */,
 				8ECB1840242D695E00069F2A /* WebViewController.swift in Sources */,
 				8EC43BE4242C2D9100BD74FF /* String+Extension.swift in Sources */,
-				8E87A07C242149BF00FFEBC3 /* ViewController.swift in Sources */,
+				8E87A07C242149BF00FFEBC3 /* ListsViewController.swift in Sources */,
 				8E1096882423FD9E00F4BCE5 /* Car.swift in Sources */,
 				8EF12F7E24244CEB00B89E90 /* HomeViewController.swift in Sources */,
 				8E0A4AE52421999800481DC2 /* Owner.swift in Sources */,

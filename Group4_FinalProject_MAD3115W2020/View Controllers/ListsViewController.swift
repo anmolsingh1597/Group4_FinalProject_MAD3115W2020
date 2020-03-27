@@ -9,7 +9,7 @@
 import UIKit
 //import MaterialComponents.MaterialCards
 
-class ViewController: UIViewController {
+class ListsViewController: UIViewController {
     @IBOutlet weak var iView1: UIView!
     @IBOutlet weak var iView2: UIView!
     @IBOutlet weak var iView3: UIView!
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension ListsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableview: UITableView) -> Int{
             return 1
