@@ -19,6 +19,7 @@ class DataStorage{
     private lazy var motorcycleList: [Motorcycle] = []
     private lazy var carList: [Car] = []
     private lazy var busList: [Bus] = []
+    private lazy var vehicleRentList: [VehicleRent] = []
     private init (){}
     
     static func getInstance() -> DataStorage{
@@ -52,6 +53,11 @@ class DataStorage{
         self.busList.append(bus)
     }
     
+    // Vehicle Rent
+    func addVehicleRent(vehicleRent: VehicleRent){
+        self.vehicleRentList.append(vehicleRent)
+    }
+    
     // Fetch all Persons
     
     func getAllCustomers() -> [Customer]{
@@ -77,6 +83,10 @@ class DataStorage{
     }
     func getAllBuses() -> [Bus]{
         return self.busList
+    }
+    // fetching all vehicle rents
+    func getAllVehiclesRentList() -> [VehicleRent]{
+        return self.vehicleRentList
     }
     
     // Getting data from Firebase
@@ -116,6 +126,15 @@ class DataStorage{
                     else {
                         
                     }
+                }
+            }
+        })
+        let vehicleRentRefer = self.ref.child("VehicleRent")
+        vehicleRentRefer.observeSingleEvent(of: .value, with: {(snapshot)
+            in
+            if let vehicleRentDict = snapshot.value as? [String: [String: String]]{
+                for value in vehicleRentDict.values{
+                    self.vehicleRentList.append((VehicleRent(custId: value["id"] ?? "", name: value["firstName"] ?? "", vin: value["vin"] ?? "", vehicle: value["vehicle"] ?? "", noOfDays: value["rentedNoOfDays"] ?? "", noOfKmDrived: value["noOfKmDrived"] ?? "", totalFare: value["totalFare"] ?? "")))
                 }
             }
         })
